@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Meet the distinguished keynote, international and national speakers at BRAIN'26 - IInd Annual International Conference on DISTINCT: Driving Inclusive Sustainability Through Innovation, Culture & Technology, 21-22 December 2026, NSUT New Delhi.">
+    <meta name="keywords" content="BRAIN'26 speakers, keynote speakers, NSUT conference, DMS DIEV, international speakers">
+    <meta name="author" content="Department of Management Studies, NSUT">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Speakers - BRAIN'26 International Conference">
+    <meta property="og:description" content="Distinguished keynote, international and national speakers joining BRAIN'26 at NSUT, New Delhi.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="./images/og-image.png">
+    <meta property="og:url" content="https://brain26.com/speakers.html">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="./images/favicon.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS Files (existing, unmodified) -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="animations.css">
+
+    <title>Speakers - BRAIN'26 IInd Annual International Conference | NSUT</title>
+
+    <!-- Page-specific styles: additive only, does not modify existing CSS files -->
+    <style>
+        /* Breadcrumb */
+        .breadcrumb-nav {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: var(--font-size-sm);
+            color: rgba(255, 255, 255, 0.85);
+            margin-bottom: var(--spacing-lg);
+        }
+        .breadcrumb-nav a {
+            color: rgba(255, 255, 255, 0.85);
+            transition: color var(--transition-base);
+        }
+        .breadcrumb-nav a:hover {
+            color: white;
+        }
+        .breadcrumb-nav span.sep {
+            opacity: 0.6;
+        }
+        .breadcrumb-nav span.current {
+            color: white;
+            font-weight: 600;
+        }
+
+        /* Page Hero (smaller than homepage hero) */
+        .page-hero {
+            position: relative;
+            padding: 160px 0 90px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            overflow: hidden;
+            text-align: center;
+        }
+        .page-hero .floating-shape {
+            opacity: 0.12;
+        }
+        .page-hero-content {
+            position: relative;
+            z-index: 2;
+        }
+        .page-hero-title {
+            color: white;
+            font-size: clamp(2.25rem, 5vw, 3.5rem);
+            margin-bottom: var(--spacing-md);
+            animation: fadeInUp 0.8s ease-out;
+        }
+        .page-hero-subtitle {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: var(--font-size-lg);
+            max-width: 700px;
+            margin: 0 auto;
+            animation: fadeInUp 0.8s ease-out 0.1s both;
+        }
+
+        /* Search & Filter Bar */
+        .search-filter-bar {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--spacing-lg);
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: var(--spacing-3xl);
+            padding: var(--spacing-lg);
+            background: var(--card-bg-color);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-xl);
+            box-shadow: var(--shadow-md);
+        }
+        .search-box {
+            position: relative;
+            flex: 1;
+            min-width: 240px;
+        }
+        .search-box input {
+            width: 100%;
+            padding: 0.85rem 1rem 0.85rem 2.75rem;
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-lg);
+            font-family: var(--font-secondary);
+            font-size: var(--font-size-base);
+            background: var(--background-color);
+            color: var(--text-color);
+            outline: none;
+            transition: all var(--transition-base);
+        }
+        .search-box input:focus {
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(23, 9, 110, 0.1);
+        }
+        .search-box svg {
+            position: absolute;
+            left: 0.9rem;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 20px;
+            height: 20px;
+            color: var(--text-lighter);
+        }
+        .filter-buttons {
+            display: flex;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+        }
+        .filter-btn {
+            padding: 0.65rem 1.25rem;
+            border: 2px solid var(--border-color);
+            background: transparent;
+            color: var(--text-color);
+            border-radius: var(--radius-full);
+            font-family: var(--font-primary);
+            font-weight: 500;
+            font-size: var(--font-size-sm);
+            cursor: pointer;
+            transition: all var(--transition-base);
+            white-space: nowrap;
+        }
+        .filter-btn:hover {
+            border-color: var(--primary-color);
+            color: var(--primary-color);
+        }
+        .filter-btn.active {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            border-color: transparent;
+            color: white;
+        }
+
+        /* Speaker Grid & Card */
+        .speakers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: var(--spacing-2xl);
+            margin-bottom: var(--spacing-2xl);
+        }
+        .speaker-card {
+            background: var(--card-bg-color);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-2xl);
+            overflow: hidden;
+            text-align: center;
+            padding: var(--spacing-2xl) var(--spacing-lg);
+            box-shadow: var(--shadow-md);
+            transition: all var(--transition-base);
+        }
+        .speaker-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-xl);
+            border-color: var(--primary-color);
+        }
+        .speaker-photo {
+            width: 130px;
+            height: 130px;
+            margin: 0 auto var(--spacing-lg);
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            overflow: hidden;
+            border: 4px solid var(--background-color);
+            box-shadow: var(--shadow-md);
+        }
+        .speaker-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .speaker-photo svg {
+            width: 65px;
+            height: 65px;
+        }
+        .speaker-card h3 {
+            font-size: var(--font-size-xl);
+            color: var(--text-color);
+            margin-bottom: 0.25rem;
+        }
+        .speaker-designation {
+            color: var(--secondary-color);
+            font-weight: 600;
+            font-size: var(--font-size-sm);
+            margin-bottom: 0.25rem;
+        }
+        .speaker-institution {
+            color: var(--text-light);
+            font-size: var(--font-size-sm);
+            margin-bottom: 0.25rem;
+        }
+        .speaker-country {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            font-size: var(--font-size-xs);
+            color: var(--text-lighter);
+            margin-bottom: var(--spacing-md);
+        }
+        .speaker-area-tag {
+            display: inline-block;
+            padding: 0.3rem 0.85rem;
+            background: rgba(23, 9, 110, 0.08);
+            color: var(--primary-color);
+            border-radius: var(--radius-full);
+            font-size: var(--font-size-xs);
+            font-weight: 600;
+            margin-bottom: var(--spacing-lg);
+        }
+        .speaker-social {
+            display: flex;
+            justify-content: center;
+            gap: 0.6rem;
+            margin-bottom: var(--spacing-lg);
+        }
+        .speaker-social a {
+            width: 34px;
+            height: 34px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(23, 9, 110, 0.08);
+            border-radius: var(--radius-full);
+            color: var(--primary-color);
+            transition: all var(--transition-base);
+        }
+        .speaker-social a:hover {
+            background: var(--primary-color);
+            color: white;
+        }
+        .speaker-social svg {
+            width: 16px;
+            height: 16px;
+        }
+        .view-profile-btn {
+            width: 100%;
+            justify-content: center;
+        }
+
+        /* Category section badge */
+        .category-badge {
+            display: inline-block;
+            padding: 0.4rem 1rem;
+            border-radius: var(--radius-full);
+            font-size: var(--font-size-xs);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: var(--spacing-md);
+        }
+        .category-badge.keynote {
+            background: rgba(137, 13, 13, 0.1);
+            color: var(--accent-color);
+        }
+        .category-badge.international {
+            background: rgba(23, 9, 110, 0.1);
+            color: var(--primary-color);
+        }
+        .category-badge.national {
+            background: rgba(176, 120, 21, 0.1);
+            color: var(--secondary-color);
+        }
+
+        /* No results message */
+        .no-results {
+            text-align: center;
+            padding: var(--spacing-3xl) 0;
+            color: var(--text-lighter);
+            display: none;
+        }
+        .no-results.show {
+            display: block;
+        }
+
+        /* Speaker Bio Modal */
+        .speaker-modal-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(15, 23, 42, 0.75);
+            z-index: 2000;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: var(--spacing-lg);
+            opacity: 0;
+            transition: opacity var(--transition-base);
+        }
+        .speaker-modal-overlay.active {
+            display: flex;
+            opacity: 1;
+        }
+        .speaker-modal {
+            background: var(--card-bg-color);
+            border-radius: var(--radius-2xl);
+            max-width: 560px;
+            width: 100%;
+            max-height: 85vh;
+            overflow-y: auto;
+            padding: var(--spacing-2xl);
+            position: relative;
+            box-shadow: var(--shadow-2xl);
+            animation: scaleIn 0.3s ease-out;
+        }
+        .speaker-modal-close {
+            position: absolute;
+            top: var(--spacing-lg);
+            right: var(--spacing-lg);
+            width: 36px;
+            height: 36px;
+            border: none;
+            background: rgba(23, 9, 110, 0.08);
+            border-radius: 50%;
+            font-size: 1.5rem;
+            line-height: 1;
+            cursor: pointer;
+            color: var(--text-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all var(--transition-base);
+        }
+        .speaker-modal-close:hover {
+            background: var(--accent-color);
+            color: white;
+        }
+        .speaker-modal-header {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-lg);
+            margin-bottom: var(--spacing-lg);
+        }
+        .speaker-modal-photo {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            flex-shrink: 0;
+            overflow: hidden;
+        }
+        .speaker-modal-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .speaker-modal-photo svg {
+            width: 45px;
+            height: 45px;
+        }
+        .speaker-modal-body h3 {
+            margin-bottom: 0.25rem;
+            font-size: var(--font-size-xl);
+        }
+        .session-detail-box {
+            background: rgba(23, 9, 110, 0.05);
+            border-left: 3px solid var(--primary-color);
+            border-radius: var(--radius-md);
+            padding: var(--spacing-lg);
+            margin-top: var(--spacing-lg);
+        }
+        .session-detail-box p {
+            margin-bottom: 0.4rem;
+            font-size: var(--font-size-sm);
+        }
+        .session-detail-box p:last-child {
+            margin-bottom: 0;
+        }
+        .session-detail-box strong {
+            color: var(--text-color);
+        }
+
+        body.dark-mode .search-filter-bar,
+        body.dark-mode .speaker-card,
+        body.dark-mode .speaker-modal {
+            background: var(--card-bg-color);
+        }
+    </style>
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loadingScreen" class="loading-screen">
+        <div class="loader">
+            <div class="loader-circle"></div>
+            <p>Loading BRAIN'26...</p>
+        </div>
+    </div>
+
+    <!-- Scroll Progress Bar -->
+    <div id="scrollProgressBar" class="scroll-progress-bar"></div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar sticky-navbar">
+        <div class="navbar-container">
+            <!-- Logo -->
+            <div class="navbar-logo">
+                <div class="logo-placeholder">
+                    <span class="logo-text">BRAIN'26</span>
+                </div>
+            </div>
+
+            <!-- Hamburger Menu -->
+            <div class="hamburger-menu" id="hamburgerMenu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <!-- Navigation Links -->
+            <ul class="navbar-menu" id="navbarMenu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="speakers.html" class="nav-link active">Speakers</a></li>
+                <li><a href="committee.html" class="nav-link">Committee</a></li>
+                <li><a href="submission.html" class="nav-link">Submission</a></li>
+                <li><a href="registration.html" class="nav-link">Registration</a></li>
+                <li><a href="venue.html" class="nav-link">Venue</a></li>
+                <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+
+            <!-- Right Side Actions -->
+            <div class="navbar-actions">
+                <button class="dark-mode-toggle" id="darkModeToggle" title="Toggle Dark Mode">
+                    <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+                <a href="./registration.html" class="btn btn-primary btn-small">Register</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="animated-bg">
+            <div class="floating-shape shape-1"></div>
+            <div class="floating-shape shape-2"></div>
+            <div class="floating-shape shape-3"></div>
+        </div>
+        <div class="container page-hero-content">
+            <nav class="breadcrumb-nav" aria-label="Breadcrumb" style="justify-content: center;">
+                <a href="index.html">Home</a>
+                <span class="sep">/</span>
+                <span class="current">Speakers</span>
+            </nav>
+            <h1 class="page-hero-title">Our Speakers</h1>
+            <p class="page-hero-subtitle">Meet the distinguished keynote, international and national speakers joining BRAIN'26 to explore DISTINCT: Driving Inclusive Sustainability Through Innovation, Culture &amp; Technology</p>
+        </div>
+    </section>
+
+    <!-- Search & Filter -->
+    <section style="padding-top: var(--spacing-3xl);">
+        <div class="container">
+            <div class="search-filter-bar">
+                <div class="search-box">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="M21 21l-4.35-4.35"></path>
+                    </svg>
+                    <input type="text" id="speakerSearch" placeholder="Search speakers by name, institution or research area...">
+                </div>
+                <div class="filter-buttons" id="speakerFilters">
+                    <button class="filter-btn active" data-filter="all">All Speakers</button>
+                    <button class="filter-btn" data-filter="keynote">Keynote</button>
+                    <button class="filter-btn" data-filter="international">International</button>
+                    <button class="filter-btn" data-filter="national">National</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Keynote Speakers -->
+    <section class="speakers-preview-section" id="keynoteSection">
+        <div class="container">
+            <div class="section-header">
+                <span class="category-badge keynote">Featured</span>
+                <h2 class="section-title">Keynote Speakers</h2>
+                <p class="section-subtitle">Distinguished voices setting the tone for DISTINCT</p>
+            </div>
+            <div class="speakers-grid" id="keynoteGrid">
+                <p style="text-align:center; grid-column: 1/-1; color: var(--text-lighter);">Loading speakers...</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- International Speakers -->
+    <section class="about-section" id="internationalSection">
+        <div class="container">
+            <div class="section-header">
+                <span class="category-badge international">Global Voices</span>
+                <h2 class="section-title">International Speakers</h2>
+                <p class="section-subtitle">Perspectives from across the globe, including our partners at CUT, South Africa</p>
+            </div>
+            <div class="speakers-grid" id="internationalGrid"></div>
+        </div>
+    </section>
+
+    <!-- National Speakers -->
+    <section class="speakers-preview-section" id="nationalSection">
+        <div class="container">
+            <div class="section-header">
+                <span class="category-badge national">Home Ground</span>
+                <h2 class="section-title">National Speakers</h2>
+                <p class="section-subtitle">Leading Indian academicians and practitioners</p>
+            </div>
+            <div class="speakers-grid" id="nationalGrid"></div>
+        </div>
+    </section>
+
+    <!-- No results -->
+    <div class="container">
+        <p class="no-results" id="noResultsMsg">No speakers match your search. Try a different name, institution or research area.</p>
+    </div>
+
+    <!-- CTA -->
+    <section class="registration-cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Want to Be a Speaker at BRAIN'26?</h2>
+                <p>We welcome proposals from academicians, researchers and industry leaders working on inclusive sustainability, innovation, culture and technology.</p>
+                <a href="./contact.html" class="btn btn-primary btn-large">Get in Touch</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Speaker Bio Modal -->
+    <div class="speaker-modal-overlay" id="speakerModalOverlay">
+        <div class="speaker-modal">
+            <button class="speaker-modal-close" id="speakerModalClose" aria-label="Close">&times;</button>
+            <div class="speaker-modal-header">
+                <div class="speaker-modal-photo" id="modalPhoto">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"></path></svg>
+                </div>
+                <div>
+                    <h3 id="modalName">Speaker Name</h3>
+                    <p class="speaker-designation" id="modalDesignation">Designation</p>
+                    <p class="speaker-institution" id="modalInstitution">Institution</p>
+                </div>
+            </div>
+            <div class="speaker-modal-body">
+                <p id="modalBio">Biography loading...</p>
+                <div class="session-detail-box" id="modalSessionBox">
+                    <p><strong>Session:</strong> <span id="modalSessionTitle"></span></p>
+                    <p><strong>Date:</strong> <span id="modalSessionDate"></span></p>
+                    <p><strong>Time:</strong> <span id="modalSessionTime"></span></p>
+                </div>
+                <div class="speaker-social" style="margin-top: var(--spacing-lg);" id="modalSocial"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Footer Column 1 -->
+                <div class="footer-column">
+                    <h3>BRAIN'26</h3>
+                    <p>Department of Management Studies (DMS)<br>
+                    Department of Innovation, Entrepreneurship &amp; Venture Development (DIEV)<br>
+                    Netaji Subhas University of Technology<br><br>
+                    In Collaboration with:<br>
+                    Central University of Technology, South Africa</p>
+                    <div class="social-links">
+                        <a href="#" title="Facebook" aria-label="Facebook">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path></svg>
+                        </a>
+                        <a href="#" title="Twitter" aria-label="Twitter">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.953 4.57a10 10 0 002.856-3.915 10 10 0 01-2.866.853c1.03-1.6 1.938-3.996 2.001-6.42 0-.299-.045-.588-.141-.87a10 10 0 01-2.85 2.915c-1.9-1.86-4.61-2.634-7.44-2.634-5.303 0-9.417 3.488-9.417 7.827 0 .581.063 1.149.252 1.704C5.555 15.068 2.966 13.42 1.64 11.238c-.502 1.81-.505 4.755.188 7.307 1.187 3.905 4.411 6.54 8.037 7.27-1.249.645-2.646.993-4.134.993-.339 0-.678-.017-1.01-.05 3.4 10.823 13.585 18.452 25.604 10.4 2.35-.935 4.755-2.405 6.772-4.643a15.02 15.02 0 001.402-2.434z"></path></svg>
+                        </a>
+                        <a href="#" title="LinkedIn" aria-label="LinkedIn">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"></path></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Footer Column 2 -->
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="speakers.html">Speakers</a></li>
+                        <li><a href="submission.html">Submit Paper</a></li>
+                        <li><a href="registration.html">Register</a></li>
+                        <li><a href="venue.html">Venue</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Footer Column 3 -->
+                <div class="footer-column">
+                    <h4>Information</h4>
+                    <ul>
+                        <li><a href="committee.html">Committee</a></li>
+                        <li><a href="submission.html">Call for Papers</a></li>
+                        <li><a href="index.html#tracksSection">Important Dates</a></li>
+                        <li><a href="sponsors.html">Sponsorship</a></li>
+                        <li><a href="downloads.html">Downloads</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+
+                <!-- Footer Column 4 -->
+                <div class="footer-column">
+                    <h4>Contact</h4>
+                    <p>
+                        <strong>Netaji Subhas University of Technology</strong><br>
+                        NSUT, Dwarka, New Delhi<br>
+                        <a href="mailto:icbrain@nsut.ac.in">icbrain@nsut.ac.in</a>
+                    </p>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <p>&copy; 2026 BRAIN'26 - Department of Management Studies &amp; DIEV, NSUT. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms &amp; Conditions</a></p>
+                <div class="footer-credit">
+                    <p>Organized by <strong>NSUT</strong> in collaboration with <strong>Central University of Technology, South Africa</strong></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTopBtn" class="back-to-top" title="Back to Top">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+    </button>
+
+    <!-- JavaScript Files (existing, unmodified) -->
+    <script src="main.js" defer></script>
+    <script src="darkmode.js" defer></script>
+
+    <!-- Page-specific script: loads and filters speakers.json, drives search + bio modal -->
+    <script>
+        (function() {
+            'use strict';
+
+            let allSpeakers = [];
+            let activeFilter = 'all';
+            let searchTerm = '';
+
+            document.addEventListener('DOMContentLoaded', function() {
+                loadSpeakers();
+                initFilterButtons();
+                initSearch();
+                initModalEvents();
+            });
+
+            function loadSpeakers() {
+                fetch('./data/speakers.json')
+                    .then(response => response.json())
+                    .then(data => {
+                        allSpeakers = data.speakers || [];
+                        renderSpeakers();
+                    })
+                    .catch(error => {
+                        console.error('Could not load speakers.json', error);
+                        document.getElementById('keynoteGrid').innerHTML =
+                            '<p style="text-align:center; grid-column: 1/-1; color: var(--text-lighter);">Speaker information will be updated soon.</p>';
+                    });
+            }
+
+            function initFilterButtons() {
+                const buttons = document.querySelectorAll('#speakerFilters .filter-btn');
+                buttons.forEach(btn => {
+                    btn.addEventListener('click', () => {
+                        buttons.forEach(b => b.classList.remove('active'));
+                        btn.classList.add('active');
+                        activeFilter = btn.getAttribute('data-filter');
+                        renderSpeakers();
+                    });
+                });
+            }
+
+            function initSearch() {
+                const searchInput = document.getElementById('speakerSearch');
+                if (!searchInput) return;
+                searchInput.addEventListener('input', (e) => {
+                    searchTerm = e.target.value.trim().toLowerCase();
+                    renderSpeakers();
+                });
+            }
+
+            function matchesSearch(speaker) {
+                if (!searchTerm) return true;
+                return (
+                    speaker.name.toLowerCase().includes(searchTerm) ||
+                    speaker.institution.toLowerCase().includes(searchTerm) ||
+                    (speaker.area && speaker.area.toLowerCase().includes(searchTerm)) ||
+                    (speaker.country && speaker.country.toLowerCase().includes(searchTerm))
+                );
+            }
+
+            function renderSpeakers() {
+                const keynoteGrid = document.getElementById('keynoteGrid');
+                const internationalGrid = document.getElementById('internationalGrid');
+                const nationalGrid = document.getElementById('nationalGrid');
+                const noResultsMsg = document.getElementById('noResultsMsg');
+
+                const keynoteSection = document.getElementById('keynoteSection');
+                const internationalSection = document.getElementById('internationalSection');
+                const nationalSection = document.getElementById('nationalSection');
+
+                keynoteGrid.innerHTML = '';
+                internationalGrid.innerHTML = '';
+                nationalGrid.innerHTML = '';
+
+                const filtered = allSpeakers.filter(matchesSearch);
+
+                const keynote = filtered.filter(s => s.category === 'keynote');
+                const international = filtered.filter(s => s.category === 'international');
+                const national = filtered.filter(s => s.category === 'national');
+
+                const showKeynote = activeFilter === 'all' || activeFilter === 'keynote';
+                const showInternational = activeFilter === 'all' || activeFilter === 'international';
+                const showNational = activeFilter === 'all' || activeFilter === 'national';
+
+                keynoteSection.style.display = (showKeynote && keynote.length) ? 'block' : 'none';
+                internationalSection.style.display = (showInternational && international.length) ? 'block' : 'none';
+                nationalSection.style.display = (showNational && national.length) ? 'block' : 'none';
+
+                if (showKeynote) keynote.forEach(s => keynoteGrid.appendChild(buildSpeakerCard(s)));
+                if (showInternational) international.forEach(s => internationalGrid.appendChild(buildSpeakerCard(s)));
+                if (showNational) national.forEach(s => nationalGrid.appendChild(buildSpeakerCard(s)));
+
+                const totalShown =
+                    (showKeynote ? keynote.length : 0) +
+                    (showInternational ? international.length : 0) +
+                    (showNational ? national.length : 0);
+
+                noResultsMsg.classList.toggle('show', totalShown === 0);
+            }
+
+            function buildSpeakerCard(speaker) {
+                const card = document.createElement('div');
+                card.className = 'speaker-card fade-in-up';
+
+                card.innerHTML = `
+                    <div class="speaker-photo">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"></path></svg>
+                    </div>
+                    <h3>${speaker.name}</h3>
+                    <p class="speaker-designation">${speaker.designation || ''}</p>
+                    <p class="speaker-institution">${speaker.institution}</p>
+                    <p class="speaker-country">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                        ${speaker.country}
+                    </p>
+                    <span class="speaker-area-tag">${speaker.area}</span>
+                    <div class="speaker-social">
+                        ${speaker.linkedin ? `<a href="${speaker.linkedin}" title="LinkedIn" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452z"></path></svg></a>` : ''}
+                        ${speaker.twitter ? `<a href="${speaker.twitter}" title="Twitter" aria-label="Twitter"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.953 4.57a10 10 0 01-2.825.775A4.958 4.958 0 0023.337 3a9.9 9.9 0 01-3.127 1.195 4.92 4.92 0 00-8.384 4.482A13.98 13.98 0 011.671 3.15a4.822 4.822 0 001.523 6.573 4.9 4.9 0 01-2.229-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.212c9.053 0 14-7.496 14-13.986 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"></path></svg></a>` : ''}
+                        ${speaker.website ? `<a href="${speaker.website}" title="Website" aria-label="Website"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg></a>` : ''}
+                    </div>
+                    <button class="btn btn-outline view-profile-btn" type="button">View Profile</button>
+                `;
+
+                card.querySelector('.view-profile-btn').addEventListener('click', () => openSpeakerModal(speaker));
+                return card;
+            }
+
+            function openSpeakerModal(speaker) {
+                document.getElementById('modalName').textContent = speaker.name;
+                document.getElementById('modalDesignation').textContent = speaker.designation || '';
+                document.getElementById('modalInstitution').textContent = `${speaker.institution}, ${speaker.country}`;
+                document.getElementById('modalBio').textContent = speaker.bio || 'Biography coming soon.';
+                document.getElementById('modalSessionTitle').textContent = speaker.sessionTitle || 'To be announced';
+                document.getElementById('modalSessionDate').textContent = speaker.sessionDate || 'To be announced';
+                document.getElementById('modalSessionTime').textContent = speaker.sessionTime || 'To be announced';
+
+                const modalSocial = document.getElementById('modalSocial');
+                modalSocial.innerHTML = `
+                    ${speaker.linkedin ? `<a href="${speaker.linkedin}" title="LinkedIn" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452z"></path></svg></a>` : ''}
+                    ${speaker.website ? `<a href="${speaker.website}" title="Website" aria-label="Website"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg></a>` : ''}
+                `;
+
+                document.getElementById('speakerModalOverlay').classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+
+            function closeSpeakerModal() {
+                document.getElementById('speakerModalOverlay').classList.remove('active');
+                document.body.style.overflow = '';
+            }
+
+            function initModalEvents() {
+                document.getElementById('speakerModalClose').addEventListener('click', closeSpeakerModal);
+                document.getElementById('speakerModalOverlay').addEventListener('click', (e) => {
+                    if (e.target.id === 'speakerModalOverlay') closeSpeakerModal();
+                });
+                document.addEventListener('keydown', (e) => {
+                    if (e.key === 'Escape') closeSpeakerModal();
+                });
+            }
+        })();
+    </script>
+
+</body>
+</html>
