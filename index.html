@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Brain2026 - International Conference on Management. December 21-22, 2026 at NSUT, New Delhi. Join us for cutting-edge research presentations, networking, and collaboration.">
+    <meta name="keywords" content="conference, management, international, NSUT, New Delhi, research, academic">
+    <meta name="author" content="Brain2026 Conference Team">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Brain2026 - International Conference on Management">
+    <meta property="og:description" content="Join us December 21-22, 2026 at NSUT, New Delhi for the International Conference on Management.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="./images/og-image.png">
+    <meta property="og:url" content="https://brain2026.com">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="./images/favicon.png">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+    <link rel="stylesheet" href="./css/animations.css">
+    
+    <title>Brain2026 - International Conference on Management</title>
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loadingScreen" class="loading-screen">
+        <div class="loader">
+            <div class="loader-circle"></div>
+            <p>Loading Brain2026...</p>
+        </div>
+    </div>
+
+    <!-- Scroll Progress Bar -->
+    <div id="scrollProgressBar" class="scroll-progress-bar"></div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar sticky-navbar">
+        <div class="navbar-container">
+            <!-- Logo -->
+            <div class="navbar-logo">
+                <div class="logo-placeholder">
+                    <span class="logo-text">Brain2026</span>
+                </div>
+            </div>
+
+            <!-- Hamburger Menu -->
+            <div class="hamburger-menu" id="hamburgerMenu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <!-- Navigation Links -->
+            <ul class="navbar-menu" id="navbarMenu">
+                <li><a href="./index.html" class="nav-link active">Home</a></li>
+                <li><a href="./about.html" class="nav-link">About</a></li>
+                <li><a href="./speakers.html" class="nav-link">Speakers</a></li>
+                <li><a href="./committee.html" class="nav-link">Committee</a></li>
+                <li><a href="./submission.html" class="nav-link">Submission</a></li>
+                <li><a href="./registration.html" class="nav-link">Registration</a></li>
+                <li><a href="./venue.html" class="nav-link">Venue</a></li>
+                <li><a href="./gallery.html" class="nav-link">Gallery</a></li>
+                <li><a href="./contact.html" class="nav-link">Contact</a></li>
+            </ul>
+
+            <!-- Right Side Actions -->
+            <div class="navbar-actions">
+                <button class="dark-mode-toggle" id="darkModeToggle" title="Toggle Dark Mode">
+                    <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+                <a href="./registration.html" class="btn btn-primary btn-small">Register</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <!-- Animated Background -->
+        <div class="animated-bg">
+            <div class="floating-shape shape-1"></div>
+            <div class="floating-shape shape-2"></div>
+            <div class="floating-shape shape-3"></div>
+            <div class="floating-shape shape-4"></div>
+            <div class="animated-gradient"></div>
+        </div>
+
+        <div class="hero-content">
+            <div class="hero-text fade-in-up">
+                <h1 class="hero-title">Brain2026</h1>
+                <p class="hero-subtitle">International Conference on Management</p>
+                <p class="hero-description">Discover innovative management paradigms, network with global experts, and shape the future of business leadership</p>
+
+                <!-- CTA Buttons -->
+                <div class="hero-buttons">
+                    <a href="./registration.html" class="btn btn-primary btn-large">
+                        <span>Register Now</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"></path>
+                        </svg>
+                    </a>
+                    <a href="./submission.html" class="btn btn-secondary btn-large">
+                        <span>Submit Paper</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+                            <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+                        </svg>
+                    </a>
+                    <a href="#" class="btn btn-outline" id="downloadBrochure">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <polyline points="7 10 12 15 17 10"></polyline>
+                            <line x1="12" y1="15" x2="12" y2="3"></line>
+                        </svg>
+                        Download Brochure
+                    </a>
+                </div>
+            </div>
+
+            <!-- Hero Info Cards -->
+            <div class="hero-cards fade-in-down">
+                <div class="hero-card">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="3" y="4" width="18" height="18" rx="2"></rect>
+                        <line x1="16" y1="2" x2="16" y2="6"></line>
+                        <line x1="8" y1="2" x2="8" y2="6"></line>
+                        <line x1="3" y1="10" x2="21" y2="10"></line>
+                    </svg>
+                    <div>
+                        <p class="card-label">Date</p>
+                        <p class="card-value">21-22 Dec 2026</p>
+                    </div>
+                </div>
+                <div class="hero-card">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                        <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                    <div>
+                        <p class="card-label">Venue</p>
+                        <p class="card-value">NSUT, New Delhi</p>
+                    </div>
+                </div>
+                <div class="hero-card">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="9" cy="7" r="4"></circle>
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                    </svg>
+                    <div>
+                        <p class="card-label">Expected</p>
+                        <p class="card-value">500+ Attendees</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Countdown Timer Section -->
+    <section class="countdown-section">
+        <div class="container">
+            <h2 class="section-title">Conference Starts In</h2>
+            <div class="countdown" id="countdown">
+                <div class="countdown-item">
+                    <span class="countdown-value" id="days">0</span>
+                    <span class="countdown-label">Days</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-value" id="hours">0</span>
+                    <span class="countdown-label">Hours</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-value" id="minutes">0</span>
+                    <span class="countdown-label">Minutes</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-value" id="seconds">0</span>
+                    <span class="countdown-label">Seconds</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Announcement Ticker -->
+    <section class="announcement-section">
+        <div class="announcement-ticker">
+            <div class="ticker-label">📢 Latest Updates</div>
+            <div class="ticker-content" id="announcementTicker">
+                <div class="ticker-item">Loading announcements...</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Conference Section -->
+    <section class="about-section" id="aboutSection">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">About Brain2026</h2>
+                <p class="section-subtitle">Connecting minds, advancing management</p>
+            </div>
+
+            <div class="about-grid">
+                <div class="about-card fade-in-up">
+                    <div class="about-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"></path>
+                            <path d="M12 6v6l4.5 2.7"></path>
+                        </svg>
+                    </div>
+                    <h3>Innovation in Management</h3>
+                    <p>Explore cutting-edge research and emerging trends in management practices, organizational behavior, and strategic leadership.</p>
+                </div>
+
+                <div class="about-card fade-in-up">
+                    <div class="about-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                        </svg>
+                    </div>
+                    <h3>Global Networking</h3>
+                    <p>Connect with 500+ academics, researchers, and industry professionals from across the globe to build lasting professional relationships.</p>
+                </div>
+
+                <div class="about-card fade-in-up">
+                    <div class="about-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                        </svg>
+                    </div>
+                    <h3>Knowledge Exchange</h3>
+                    <p>Participate in interactive panel discussions, workshops, and presentations featuring world-class experts and thought leaders.</p>
+                </div>
+
+                <div class="about-card fade-in-up">
+                    <div class="about-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"></path>
+                        </svg>
+                    </div>
+                    <h3>Quality Publications</h3>
+                    <p>Get your research published in Springer proceedings and other high-impact journals with peer-reviewed quality assurance.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Attend Section -->
+    <section class="why-attend-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Why Attend Brain2026?</h2>
+                <p class="section-subtitle">Transform your career and expand your horizons</p>
+            </div>
+
+            <div class="benefits-grid">
+                <div class="benefit-item">
+                    <div class="benefit-number">01</div>
+                    <h4>Network with Experts</h4>
+                    <p>Meet renowned researchers, academicians, and industry leaders in management and related fields.</p>
+                </div>
+
+                <div class="benefit-item">
+                    <div class="benefit-number">02</div>
+                    <h4>Publish Your Research</h4>
+                    <p>Get your work featured in reputable publications and reach a wider academic audience.</p>
+                </div>
+
+                <div class="benefit-item">
+                    <div class="benefit-number">03</div>
+                    <h4>Learn New Insights</h4>
+                    <p>Gain valuable knowledge about contemporary management challenges and innovative solutions.</p>
+                </div>
+
+                <div class="benefit-item">
+                    <div class="benefit-number">04</div>
+                    <h4>Career Development</h4>
+                    <p>Enhance your skills and visibility in the academic and professional management community.</p>
+                </div>
+
+                <div class="benefit-item">
+                    <div class="benefit-number">05</div>
+                    <h4>Global Perspective</h4>
+                    <p>Understand international management practices and cross-cultural business strategies.</p>
+                </div>
+
+                <div class="benefit-item">
+                    <div class="benefit-number">06</div>
+                    <h4>Collaboration Opportunities</h4>
+                    <p>Establish partnerships for future research projects and collaborative endeavors.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Conference Highlights Section -->
+    <section class="highlights-section">
+        <div class="container">
+            <h2 class="section-title">Conference Highlights</h2>
+
+            <div class="highlights-grid">
+                <div class="highlight-card" style="--delay: 0s;">
+                    <div class="highlight-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <polyline points="17 8 12 3 7 8"></polyline>
+                            <line x1="12" y1="3" x2="12" y2="15"></line>
+                        </svg>
+                    </div>
+                    <h3>50+ Keynote Speakers</h3>
+                    <p>Distinguished experts sharing their insights on management trends and innovations</p>
+                </div>
+
+                <div class="highlight-card" style="--delay: 0.1s;">
+                    <div class="highlight-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="3" width="18" height="18" rx="2"></rect>
+                            <path d="M3 9h18"></path>
+                            <path d="M9 3v18"></path>
+                        </svg>
+                    </div>
+                    <h3>8+ Conference Tracks</h3>
+                    <p>Diverse research themes covering all aspects of modern management</p>
+                </div>
+
+                <div class="highlight-card" style="--delay: 0.2s;">
+                    <div class="highlight-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"></path>
+                            <path d="M12 6v6l4 2"></path>
+                        </svg>
+                    </div>
+                    <h3>2 Days of Learning</h3>
+                    <p>Intensive sessions, workshops, and networking opportunities</p>
+                </div>
+
+                <div class="highlight-card" style="--delay: 0.3s;">
+                    <div class="highlight-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm3.5-9c.83 0 1.5-.67 1.5-1.5S16.33 8 15.5 8 14 8.67 14 9.5s.67 1.5 1.5 1.5zm-7 0c.83 0 1.5-.67 1.5-1.5S9.33 8 8.5 8 7 8.67 7 9.5 7.67 11 8.5 11zm3.5 6.5c2.33 0 4.31-1.46 5.11-3.5H6.89c.8 2.04 2.78 3.5 5.11 3.5z"></path>
+                        </svg>
+                    </div>
+                    <h3>International Audience</h3>
+                    <p>Participants from 30+ countries ensuring diverse perspectives</p>
+                </div>
+
+                <div class="highlight-card" style="--delay: 0.4s;">
+                    <div class="highlight-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path>
+                            <polyline points="17 21 17 13 7 13 7 21"></polyline>
+                            <polyline points="7 3 7 8 15 8"></polyline>
+                        </svg>
+                    </div>
+                    <h3>Published Proceedings</h3>
+                    <p>Quality research featured in Springer and indexed journals</p>
+                </div>
+
+                <div class="highlight-card" style="--delay: 0.5s;">
+                    <div class="highlight-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="1"></circle>
+                            <path d="M12 1v6m0 6v6"></path>
+                            <path d="M4.22 4.22l4.24 4.24m5.08 5.08l4.24 4.24"></path>
+                            <path d="M1 12h6m6 0h6"></path>
+                            <path d="M4.22 19.78l4.24-4.24m5.08-5.08l4.24-4.24"></path>
+                        </svg>
+                    </div>
+                    <h3>Certificate of Participation</h3>
+                    <p>Recognized credentials for professional development</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Animated Statistics Section -->
+    <section class="statistics-section">
+        <div class="container">
+            <div class="statistics-grid">
+                <div class="stat-card">
+                    <div class="stat-content">
+                        <div class="stat-number" data-target="500">0</div>
+                        <p class="stat-label">Expected Participants</p>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-content">
+                        <div class="stat-number" data-target="50">0</div>
+                        <p class="stat-label">Distinguished Speakers</p>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-content">
+                        <div class="stat-number" data-target="8">0</div>
+                        <p class="stat-label">Research Tracks</p>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-content">
+                        <div class="stat-number" data-target="30">0</div>
+                        <p class="stat-label">Countries Represented</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Conference Tracks Section -->
+    <section class="tracks-section" id="tracksSection">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Conference Tracks</h2>
+                <p class="section-subtitle">Multiple research domains for diverse interests</p>
+            </div>
+
+            <div class="tracks-grid">
+                <div class="track-card">
+                    <div class="track-icon">🎯</div>
+                    <h3>Strategic Management</h3>
+                    <p>Business strategy, competitive advantage, and organizational planning</p>
+                </div>
+
+                <div class="track-card">
+                    <div class="track-icon">👥</div>
+                    <h3>Human Resource Management</h3>
+                    <p>Talent management, organizational behavior, and employee development</p>
+                </div>
+
+                <div class="track-card">
+                    <div class="track-icon">💼</div>
+                    <h3>Operations & Supply Chain</h3>
+                    <p>Process optimization, logistics, and supply chain excellence</p>
+                </div>
+
+                <div class="track-card">
+                    <div class="track-icon">💡</div>
+                    <h3>Innovation & Technology</h3>
+                    <p>Digital transformation, IT management, and innovation strategies</p>
+                </div>
+
+                <div class="track-card">
+                    <div class="track-icon">📊</div>
+                    <h3>Financial Management</h3>
+                    <p>Corporate finance, accounting, and financial decision-making</p>
+                </div>
+
+                <div class="track-card">
+                    <div class="track-icon">🌍</div>
+                    <h3>International Business</h3>
+                    <p>Global trade, international relations, and cross-cultural management</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Keynote Speakers Preview Section -->
+    <section class="speakers-preview-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Keynote Speakers</h2>
+                <p class="section-subtitle">World-class experts and thought leaders</p>
+            </div>
+
+            <div class="speakers-preview-grid" id="speakersPreview">
+                <div class="speaker-card-preview">
+                    <div class="speaker-image-placeholder">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="speaker-name">Loading speakers...</h3>
+                    <p class="speaker-title">From JSON</p>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="./speakers.html" class="btn btn-primary">View All Speakers</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Important Dates Timeline Section -->
+    <section class="dates-timeline-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Important Dates</h2>
+                <p class="section-subtitle">Mark your calendar</p>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Paper Submission Deadline</h3>
+                        <p>30 September 2026</p>
+                        <span class="timeline-status">Ongoing</span>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Author Notification</h3>
+                        <p>31 October 2026</p>
+                        <span class="timeline-status">Upcoming</span>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Camera Ready Submission</h3>
+                        <p>30 November 2026</p>
+                        <span class="timeline-status">Upcoming</span>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Early Bird Registration</h3>
+                        <p>15 November 2026</p>
+                        <span class="timeline-status">Upcoming</span>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Conference Dates</h3>
+                        <p>21-22 December 2026</p>
+                        <span class="timeline-status">Main Event</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sponsors Preview Section -->
+    <section class="sponsors-preview-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Partners & Sponsors</h2>
+                <p class="section-subtitle">Supported by leading organizations</p>
+            </div>
+
+            <div class="sponsors-grid" id="sponsorsGrid">
+                <div class="sponsor-placeholder">
+                    <p>Loading sponsors...</p>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 40px;">
+                <p class="partnership-text">Interested in sponsoring Brain2026?</p>
+                <a href="./contact.html" class="btn btn-secondary">Become a Sponsor</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Preview Section -->
+    <section class="gallery-preview-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Conference Gallery</h2>
+                <p class="section-subtitle">Moments from our previous events</p>
+            </div>
+
+            <div class="gallery-preview-grid">
+                <div class="gallery-preview-item" style="background: linear-gradient(135deg, #17096E, #B07815);">
+                    <div class="gallery-overlay">
+                        <p>Keynote Sessions</p>
+                    </div>
+                </div>
+
+                <div class="gallery-preview-item" style="background: linear-gradient(135deg, #B07815, #890D0D);">
+                    <div class="gallery-overlay">
+                        <p>Panel Discussions</p>
+                    </div>
+                </div>
+
+                <div class="gallery-preview-item" style="background: linear-gradient(135deg, #890D0D, #17096E);">
+                    <div class="gallery-overlay">
+                        <p>Networking Events</p>
+                    </div>
+                </div>
+
+                <div class="gallery-preview-item" style="background: linear-gradient(135deg, #17096E, #890D0D);">
+                    <div class="gallery-overlay">
+                        <p>Workshop Sessions</p>
+                    </div>
+                </div>
+
+                <div class="gallery-preview-item" style="background: linear-gradient(135deg, #B07815, #17096E);">
+                    <div class="gallery-overlay">
+                        <p>Award Ceremony</p>
+                    </div>
+                </div>
+
+                <div class="gallery-preview-item" style="background: linear-gradient(135deg, #890D0D, #B07815);">
+                    <div class="gallery-overlay">
+                        <p>Social Events</p>
+                    </div>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="./gallery.html" class="btn btn-primary">View Full Gallery</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <p class="section-subtitle">Find answers to common questions</p>
+            </div>
+
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h3>What is the conference registration fee?</h3>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="12" y1="5" x2="12" y2="19"></line>
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                        </svg>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Registration fees vary by category (Student: ₹2,500, Faculty: ₹4,500, Industry: ₹7,500, International: $150). Early bird discounts are available until November 15, 2026.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h3>How do I submit a research paper?</h3>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="12" y1="5" x2="12" y2="19"></line>
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                        </svg>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Visit our Submission page to upload your paper. Papers should follow the provided template and be submitted before September 30, 2026. All submissions will go through peer review.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h3>Will accommodations be provided?</h3>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="12" y1="5" x2="12" y2="19"></line>
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                        </svg>
+                    </div>
+                    <div class="faq-answer">
+                        <p>The conference will provide information on partner hotels in New Delhi. Participants can book accommodations directly. We recommend booking early as rooms fill up quickly.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h3>Is there virtual participation available?</h3>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="12" y1="5" x2="12" y2="19"></line>
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                        </svg>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, we offer virtual participation options for international attendees. Virtual registration includes access to live-streamed sessions and digital materials.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h3>What publication opportunities are available?</h3>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="12" y1="5" x2="12" y2="19"></line>
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                        </svg>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Selected papers will be published in Springer proceedings. Top papers may be considered for publication in indexed journals. All publications undergo rigorous peer review.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h3>Can I get a refund if I cancel my registration?</h3>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="12" y1="5" x2="12" y2="19"></line>
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                        </svg>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Refunds are available up to 30 days before the conference. Cancellations after December 21, 2026 are not eligible for refunds. A processing fee may apply.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Stay Updated</h2>
+                <p>Subscribe to our newsletter for the latest conference updates, speaker announcements, and special offers</p>
+
+                <form class="newsletter-form" id="newsletterForm" onsubmit="handleNewsletterSubmit(event)">
+                    <input type="email" placeholder="Enter your email address" required>
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+
+                <p class="newsletter-note">We promise not to spam. You can unsubscribe at any time.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Registration CTA Section -->
+    <section class="registration-cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Join Us?</h2>
+                <p>Don't miss this opportunity to connect with leading researchers and professionals in management. Register now for early bird discounts!</p>
+                <a href="./registration.html" class="btn btn-primary btn-large">Register Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Footer Column 1 -->
+                <div class="footer-column">
+                    <h3>Brain2026</h3>
+                    <p>International Conference on Management organized by Netaji Subhas University of Technology, New Delhi.</p>
+                    <div class="social-links">
+                        <a href="#" title="Facebook" aria-label="Facebook">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path></svg>
+                        </a>
+                        <a href="#" title="Twitter" aria-label="Twitter">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.953 4.57a10 10 0 002.856-3.915 10 10 0 01-2.866.853c1.03-1.6 1.938-3.996 2.001-6.42 0-.299-.045-.588-.141-.87a10 10 0 01-2.85 2.915c-1.9-1.86-4.61-2.634-7.44-2.634-5.303 0-9.417 3.488-9.417 7.827 0 .581.063 1.149.252 1.704C5.555 15.068 2.966 13.42 1.64 11.238c-.502 1.81-.505 4.755.188 7.307 1.187 3.905 4.411 6.54 8.037 7.27-1.249.645-2.646.993-4.134.993-.339 0-.678-.017-1.01-.05 3.4 10.823 13.585 18.452 25.604 10.4 2.35-.935 4.755-2.405 6.772-4.643a15.02 15.02 0 001.402-2.434z"></path></svg>
+                        </a>
+                        <a href="#" title="LinkedIn" aria-label="LinkedIn">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"></path></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Footer Column 2 -->
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="./about.html">About</a></li>
+                        <li><a href="./speakers.html">Speakers</a></li>
+                        <li><a href="./submission.html">Submit Paper</a></li>
+                        <li><a href="./registration.html">Register</a></li>
+                        <li><a href="./venue.html">Venue</a></li>
+                        <li><a href="./contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Footer Column 3 -->
+                <div class="footer-column">
+                    <h4>Information</h4>
+                    <ul>
+                        <li><a href="#">Committee</a></li>
+                        <li><a href="#">Call for Papers</a></li>
+                        <li><a href="#">Important Dates</a></li>
+                        <li><a href="#">Sponsorship</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+
+                <!-- Footer Column 4 -->
+                <div class="footer-column">
+                    <h4>Contact</h4>
+                    <p>
+                        <strong>Netaji Subhas University of Technology</strong><br>
+                        Main Campus, New Delhi<br>
+                        <a href="mailto:info@brain2026.com">info@brain2026.com</a><br>
+                        <a href="tel:+919876543210">+91-98765-43210</a>
+                    </p>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <p>&copy; 2026 Brain2026 Conference. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms & Conditions</a></p>
+                <div class="footer-credit">
+                    <p>Organized by <strong>Netaji Subhas University of Technology</strong></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTopBtn" class="back-to-top" title="Back to Top">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+    </button>
+
+    <!-- JavaScript Files -->
+    <script src="./js/main.js" defer></script>
+    <script src="./js/countdown.js" defer></script>
+    <script src="./js/announcements.js" defer></script>
+    <script src="./js/darkmode.js" defer></script>
+
+</body>
+</html>
