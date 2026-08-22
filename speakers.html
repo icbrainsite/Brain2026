@@ -692,7 +692,7 @@
             });
 
             function loadSpeakers() {
-                fetch('./data/speakers.json')
+                fetch('speakers.json')
                     .then(response => response.json())
                     .then(data => {
                         allSpeakers = data.speakers || [];
