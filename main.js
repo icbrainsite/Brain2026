@@ -408,27 +408,8 @@ function initLazyLoading() {
 // ===================================================
 // DOWNLOAD BROCHURE
 // ===================================================
-
-document.addEventListener('DOMContentLoaded', () => {
-    const downloadBrochureBtn = document.getElementById('downloadBrochure');
-    
-    if (downloadBrochureBtn) {
-        downloadBrochureBtn.addEventListener('click', (e) => {
-            e.preventDefault();
-            
-            // Create a simple notification
-            alert('Brochure download link would be here. This is a placeholder for the actual PDF file.');
-            
-            // In production, you would have:
-            // const link = document.createElement('a');
-            // link.href = './documents/brain2026-brochure.pdf';
-            // link.download = 'Brain2026-Brochure.pdf';
-            // document.body.appendChild(link);
-            // link.click();
-            // document.body.removeChild(link);
-        });
-    }
-});
+// The Download Brochure button now links directly to downloads.html
+// (see index.html), so no click-intercept / placeholder alert is needed here.
 
 // ===================================================
 // ANIMATION ON SCROLL (REVEAL ELEMENTS)
