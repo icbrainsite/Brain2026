@@ -218,12 +218,20 @@
         </div>
     </section>
 
-    <!-- Announcement Ticker -->
-    <section class="announcement-section">
-        <div class="announcement-ticker">
-            <div class="ticker-label">📢 Latest Updates</div>
-            <div class="ticker-content" id="announcementTicker">
-                <div class="ticker-item">Loading announcements...</div>
+    <!-- Latest Updates & Announcements Section -->
+    <section class="announcements-section" id="announcementsSection">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Latest Updates &amp; Announcements</h2>
+                <p class="section-subtitle">Important dates, submission news and everything else you need to know</p>
+            </div>
+
+            <div class="announcements-grid" id="announcementsGrid">
+                <div class="announcement-card">
+                    <div class="announcement-body">
+                        <p class="announcement-title">Loading announcements...</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -285,11 +293,11 @@
     </section>
 
     <!-- Theme Section -->
-    <section class="theme-section" style="background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); padding: var(--spacing-4xl) 0; text-align: center; color: white;">
+    <section class="theme-section">
         <div class="container">
-            <p style="text-transform: uppercase; letter-spacing: 2px; color: rgba(255,255,255,0.8); font-weight: 600; margin-bottom: 1rem;">Conference Theme</p>
-            <h2 style="color: white; font-size: clamp(2rem, 5vw, 3.5rem); margin-bottom: 1rem;">DISTINCT</h2>
-            <p style="color: rgba(255,255,255,0.95); font-size: var(--font-size-xl); max-width: 800px; margin: 0 auto;">Driving Inclusive Sustainability Through Innovation, Culture &amp; Technology</p>
+            <p class="theme-eyebrow">Conference Theme</p>
+            <h2>DISTINCT</h2>
+            <p class="theme-description">Driving Inclusive Sustainability Through Innovation, Culture &amp; Technology</p>
         </div>
     </section>
 
@@ -421,38 +429,18 @@
         </div>
     </section>
 
-    <!-- Animated Statistics Section -->
-    <section class="statistics-section">
+    <!-- Campus Section -->
+    <section class="campus-section">
         <div class="container">
-            <div class="statistics-grid">
-                <div class="stat-card">
-                    <div class="stat-content">
-                        <div class="stat-number" data-target="500">0</div>
-                        <p class="stat-label">Expected Participants</p>
-                    </div>
-                </div>
-
-                <div class="stat-card">
-                    <div class="stat-content">
-                        <div class="stat-number" data-target="50">0</div>
-                        <p class="stat-label">Distinguished Speakers</p>
-                    </div>
-                </div>
-
-                <div class="stat-card">
-                    <div class="stat-content">
-                        <div class="stat-number" data-target="8">0</div>
-                        <p class="stat-label">Research Tracks</p>
-                    </div>
-                </div>
-
-                <div class="stat-card">
-                    <div class="stat-content">
-                        <div class="stat-number" data-target="30">0</div>
-                        <p class="stat-label">Countries Represented</p>
-                    </div>
-                </div>
-            </div>
+            <p class="campus-eyebrow">Hosted At</p>
+            <h2>NSUT, New Delhi</h2>
+            <p class="campus-description">BRAIN'26 will be held on the vibrant, well-connected campus of Netaji Subhas University of Technology in Dwarka, New Delhi — with full hybrid access for delegates joining online from anywhere in the world.</p>
+            <a href="venue.html" class="btn btn-outline btn-large campus-btn">
+                <span>Explore the Venue</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                </svg>
+            </a>
         </div>
     </section>
 
@@ -610,7 +598,7 @@
                 </div>
             </div>
 
-            <div style="text-align: center; margin-top: 40px;">
+            <div class="section-footer-cta">
                 <a href="speakers.html" class="btn btn-primary">View All Speakers</a>
             </div>
         </div>
@@ -696,7 +684,7 @@
                 </div>
             </div>
 
-            <div style="text-align: center; margin-top: 40px;">
+            <div class="section-footer-cta">
                 <p class="partnership-text">Interested in sponsoring BRAIN'26?</p>
                 <a href="sponsors.html" class="btn btn-secondary">Become a Sponsor</a>
             </div>
@@ -749,7 +737,7 @@
                 </div>
             </div>
 
-            <div style="text-align: center; margin-top: 40px;">
+            <div class="section-footer-cta">
                 <a href="gallery.html" class="btn btn-primary">View Full Gallery</a>
             </div>
         </div>
