@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Learn about BRAIN'26, its host institution NSUT, the Department of Management Studies (DMS), the Department of Innovation, Entrepreneurship & Venture Development (DIEV), and collaborating partner Central University of Technology, South Africa.">
-    <meta name="keywords" content="About BRAIN'26, NSUT, DMS, DIEV, Central University of Technology, South Africa">
+    <meta name="description" content="Learn about BRAIN'26, its host institution NSUT, the Department of Management Studies (DMS) and Department of Innovation, Entrepreneurship & Venture Development (IEV), and collaborating partner Central University of Technology, South Africa.">
+    <meta name="keywords" content="About BRAIN'26, NSUT, DMS, IEV, Central University of Technology, South Africa">
     <meta name="author" content="Department of Management Studies, NSUT">
     <meta name="robots" content="index, follow">
 
     <meta property="og:title" content="About - BRAIN'26 International Conference">
-    <meta property="og:description" content="About NSUT, DMS, DIEV and Central University of Technology, South Africa — the institutions behind BRAIN'26.">
+    <meta property="og:description" content="About NSUT, DMS and IEV, and Central University of Technology, South Africa — the institutions behind BRAIN'26.">
     <meta property="og:type" content="website">
     <meta property="og:image" content="./images/og-image.png">
     <meta property="og:url" content="https://brain26.com/about.html">
@@ -33,7 +33,18 @@
         .breadcrumb-nav span.sep { opacity: 0.6; }
         .breadcrumb-nav span.current { color: white; font-weight: 600; }
 
-        .page-hero { position: relative; padding: 160px 0 90px; background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); overflow: hidden; text-align: center; }
+        .page-hero {
+            position: relative;
+            padding: 160px 0 90px;
+            background-image:
+                linear-gradient(135deg, rgba(10,6,40,0.82), rgba(23,9,110,0.68) 45%, rgba(137,13,13,0.62)),
+                url('./images/campus-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            overflow: hidden;
+            text-align: center;
+        }
         .page-hero .floating-shape { opacity: 0.12; }
         .page-hero-content { position: relative; z-index: 2; }
         .page-hero-title { color: white; font-size: clamp(2.25rem, 5vw, 3.5rem); margin-bottom: var(--spacing-md); animation: fadeInUp 0.8s ease-out; }
@@ -132,23 +143,81 @@
         </div>
     </section>
 
-    <!-- About the Conference -->
+    <!-- Theme Recap -->
+    <section class="theme-section">
+        <div class="container">
+            <p class="theme-eyebrow">Conference Theme</p>
+            <h2>DISTINCT</h2>
+            <p class="theme-description">Driving Inclusive Sustainability Through Innovation, Culture &amp; Technology</p>
+        </div>
+    </section>
+
+    <!-- About NSUT -->
+    <section class="tracks-section">
+        <div class="container">
+            <div class="institution-block">
+                <div class="institution-visual" role="img" aria-label="Netaji Subhas University of Technology campus" style="background: linear-gradient(135deg, rgba(23,9,110,0.6), rgba(46,26,143,0.6)), url('./images/campus-bg.jpg') center/cover no-repeat;">NSUT Campus</div>
+                <div class="institution-text">
+                    <span class="tag">Host Institution</span>
+                    <h2>About NSUT</h2>
+                    <p>Netaji Subhas University of Technology (NSUT) is a seat of higher technical education in India. It was established in the year 1983 as Delhi Institute of Technology with the objective of meeting the growing demands of manpower in the emerging fields of engineering and technology with a close social and industrial interface.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About DMS and IEV -->
     <section class="about-section">
+        <div class="container">
+            <div class="institution-block reverse">
+                <div class="institution-visual" style="background: linear-gradient(135deg, #B07815, #D4941F);">DMS &amp; IEV</div>
+                <div class="institution-text">
+                    <span class="tag">Co-Organizers</span>
+                    <h2>About DMS and IEV</h2>
+                    <p>The Department of Management Studies (DMS), NSUT, and the Department of Innovation, Entrepreneurship and Venture Development (IEV) foster management education, innovation, entrepreneurship, and venture creation. Together, they integrate experiential learning, mentorship, industry collaboration, and sustainability to develop future business leaders and entrepreneurs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About CUT South Africa -->
+    <section class="tracks-section">
+        <div class="container">
+            <div class="institution-block">
+                <div class="institution-visual" style="background: linear-gradient(135deg, #17096E, #890D0D);">CUT<br>South Africa</div>
+                <div class="institution-text">
+                    <span class="tag">Collaborating Partner</span>
+                    <h2>About CUT, South Africa</h2>
+                    <p>Central University of Technology (CUT), South Africa, is a technology-focused university committed to applied sciences, innovation, and career-oriented education. Its four faculties offer diverse programmes in health, humanities, engineering, IT, and management sciences.</p>
+                    <p>CUT's Strategy 2026–2030 places students at the centre, promoting excellence, sustainability, digital citizenship, innovation, and entrepreneurship. Its vision is to change lives, transform society, and shape the future through industry partnerships, impactful research, and inclusive development.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About the Conference -->
+    <section class="about-section" id="aboutConference">
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">About the Conference</h2>
                 <p class="section-subtitle">IInd Annual International Conference, 21-22 December 2026</p>
             </div>
+
+            <div class="institution-text" style="max-width: 900px; margin: 0 auto var(--spacing-2xl); text-align: center;">
+                <p>BRAIN-2026, organized by the Department of Management Studies, NSUT, advances research-driven dialogue, innovation, and interdisciplinary knowledge exchange. It brings together global scholars, industry experts, and policymakers to share evidence-based research and experiential insights.</p>
+                <p>The conference explores sustainability, technology, management, economics, social sciences, environmental challenges, and enterprise systems. BRAIN-2026 aims to foster collaboration and develop forward-looking solutions for inclusive and sustainable development.</p>
+            </div>
+
             <div class="about-grid">
                 <div class="about-card fade-in-up">
                     <div class="about-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"></path><path d="M12 6v6l4.5 2.7"></path></svg></div>
                     <h3>Second Annual Edition</h3>
-                    <p>Building on its first edition, BRAIN'26 returns as the IInd Annual International Conference organized by NSUT's Department of Management Studies and DIEV.</p>
+                    <p>Building on its first edition, BRAIN'26 returns as the IInd Annual International Conference organized by NSUT's Department of Management Studies and IEV.</p>
                 </div>
                 <div class="about-card fade-in-up">
                     <div class="about-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg></div>
                     <h3>India-South Africa Partnership</h3>
-                    <p>Jointly hosted with Central University of Technology, Free State, South Africa, bringing genuine cross-continental perspectives to every track.</p>
+                    <p>Jointly hosted with Central University of Technology, South Africa, bringing genuine cross-continental perspectives to every track.</p>
                 </div>
                 <div class="about-card fade-in-up">
                     <div class="about-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg></div>
@@ -159,71 +228,6 @@
                     <div class="about-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"></path></svg></div>
                     <h3>Eight Research Tracks</h3>
                     <p>From sustainability and governance to sustainable computing, spanning the full breadth of contemporary management research.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Theme Recap -->
-    <section class="theme-section" style="background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); padding: var(--spacing-4xl) 0; text-align: center; color: white;">
-        <div class="container">
-            <p style="text-transform: uppercase; letter-spacing: 2px; color: rgba(255,255,255,0.8); font-weight: 600; margin-bottom: 1rem;">Conference Theme</p>
-            <h2 style="color: white; font-size: clamp(2rem, 5vw, 3.5rem); margin-bottom: 1rem;">DISTINCT</h2>
-            <p style="color: rgba(255,255,255,0.95); font-size: var(--font-size-xl); max-width: 800px; margin: 0 auto;">Driving Inclusive Sustainability Through Innovation, Culture &amp; Technology</p>
-        </div>
-    </section>
-
-    <!-- About NSUT -->
-    <section class="tracks-section">
-        <div class="container">
-            <div class="institution-block">
-                <div class="institution-visual" style="background: linear-gradient(135deg, #17096E, #2E1A8F);">NSUT Campus<br>Image Placeholder</div>
-                <div class="institution-text">
-                    <span class="tag">Host Institution</span>
-                    <h2>About NSUT</h2>
-                    <p>Netaji Subhas University of Technology (NSUT) is one of India's leading technical universities, located in Dwarka, New Delhi. Renowned for its academic rigor and research output, NSUT hosts a wide range of undergraduate, postgraduate and doctoral programs across engineering, technology and management disciplines. The university provides the vibrant, well-connected campus that will host BRAIN'26 in hybrid mode.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- About DMS -->
-    <section class="about-section">
-        <div class="container">
-            <div class="institution-block reverse">
-                <div class="institution-visual" style="background: linear-gradient(135deg, #B07815, #D4941F);">DMS<br>Image Placeholder</div>
-                <div class="institution-text">
-                    <span class="tag">Co-Organizer</span>
-                    <h2>About DMS</h2>
-                    <p>The Department of Management Studies (DMS) at NSUT is dedicated to nurturing future business leaders through rigorous academic programs and impactful research in strategic management, finance, marketing, human resources and related fields. DMS serves as a lead organizer of BRAIN'26, curating the conference's academic tracks and review process.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- About DIEV -->
-    <section class="tracks-section">
-        <div class="container">
-            <div class="institution-block">
-                <div class="institution-visual" style="background: linear-gradient(135deg, #890D0D, #A31414);">DIEV<br>Image Placeholder</div>
-                <div class="institution-text">
-                    <span class="tag">Co-Organizer</span>
-                    <h2>About DIEV</h2>
-                    <p>The Department of Innovation, Entrepreneurship &amp; Venture Development (DIEV) at NSUT champions the entrepreneurial ecosystem — supporting startups, industry collaboration and venture creation. As co-organizer of BRAIN'26, DIEV brings a strong focus on innovation, entrepreneurship and industry linkages to the conference's tracks and keynote sessions.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- About CUT South Africa -->
-    <section class="about-section">
-        <div class="container">
-            <div class="institution-block reverse">
-                <div class="institution-visual" style="background: linear-gradient(135deg, #17096E, #890D0D);">CUT South Africa<br>Image Placeholder</div>
-                <div class="institution-text">
-                    <span class="tag">Collaborating Partner</span>
-                    <h2>About CUT, South Africa</h2>
-                    <p>Central University of Technology (CUT), based in Free State, South Africa, is a leading institution known for its focus on technology-driven education and applied research. As BRAIN'26's international collaborating partner, CUT contributes South African perspectives on inclusive sustainability, innovation and entrepreneurship, strengthening the conference's global relevance.</p>
                 </div>
             </div>
         </div>
