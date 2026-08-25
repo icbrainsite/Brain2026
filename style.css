@@ -774,6 +774,209 @@ body.dark-mode .dark-mode-toggle .moon-icon {
     background-size: cover !important;
     background-position: center !important;
     background-repeat: no-repeat !important;
+    position: relative;
+    padding: 160px 0 90px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.page-hero .floating-shape {
+    opacity: 0.12;
+}
+
+.page-hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.page-hero-title {
+    color: white;
+    font-size: clamp(2.25rem, 5vw, 3.5rem);
+    margin-bottom: var(--spacing-md);
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.page-hero-subtitle {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: var(--font-size-lg);
+    max-width: 700px;
+    margin: 0 auto;
+    animation: fadeInUp 0.8s ease-out 0.1s both;
+}
+
+.breadcrumb-nav {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: var(--font-size-sm);
+    color: rgba(255, 255, 255, 0.85);
+    margin-bottom: var(--spacing-lg);
+    justify-content: center;
+}
+
+.breadcrumb-nav a {
+    color: rgba(255, 255, 255, 0.85);
+    transition: color var(--transition-base);
+}
+
+.breadcrumb-nav a:hover {
+    color: white;
+}
+
+.breadcrumb-nav span.sep {
+    opacity: 0.6;
+}
+
+.breadcrumb-nav span.current {
+    color: white;
+    font-weight: 600;
+}
+
+/* ===================================================
+   COMMITTEE / LEADERSHIP CARDS
+   Used on committee.html for Chief Patron, Patrons,
+   Conference Chairs, Convenors, and the Advisory Committee.
+   =================================================== */
+.leadership-group {
+    margin-bottom: var(--spacing-3xl);
+}
+
+.leadership-group:last-child {
+    margin-bottom: 0;
+}
+
+.leadership-group-title {
+    text-align: center;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: var(--font-size-sm);
+    font-weight: 700;
+    margin-bottom: var(--spacing-xl);
+    position: relative;
+}
+
+.leadership-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: var(--spacing-2xl);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.leadership-grid-single {
+    max-width: 340px;
+}
+
+.leadership-card {
+    text-align: center;
+    padding: var(--spacing-2xl);
+    background: var(--card-bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-2xl);
+    box-shadow: var(--shadow-md);
+    transition: all var(--transition-base);
+}
+
+.leadership-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-xl);
+    border-color: var(--primary-color);
+}
+
+.leadership-avatar {
+    width: 84px;
+    height: 84px;
+    border-radius: 50%;
+    margin: 0 auto var(--spacing-lg);
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: var(--font-size-xl);
+}
+
+.leadership-card h3 {
+    color: var(--text-color);
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--spacing-xs);
+}
+
+.leadership-role {
+    color: var(--secondary-color);
+    font-weight: 600;
+    font-size: var(--font-size-xs);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: var(--spacing-sm);
+}
+
+.leadership-org {
+    color: var(--text-light);
+    font-size: var(--font-size-sm);
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+.leadership-connector {
+    text-align: center;
+    color: var(--text-lighter);
+    font-weight: 700;
+    font-size: var(--font-size-lg);
+    margin: -1rem 0 var(--spacing-lg);
+}
+
+.committee-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+    gap: var(--spacing-lg);
+}
+
+.committee-card {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    padding: var(--spacing-lg);
+    background: var(--card-bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-sm);
+    transition: all var(--transition-base);
+}
+
+.committee-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--primary-color);
+}
+
+.committee-avatar {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: var(--font-size-sm);
+    flex-shrink: 0;
+}
+
+.committee-info h4 {
+    color: var(--text-color);
+    font-size: var(--font-size-base);
+    margin-bottom: 0.2rem;
+}
+
+.committee-info p {
+    color: var(--text-light);
+    font-size: var(--font-size-xs);
+    line-height: 1.5;
+    margin-bottom: 0;
 }
 
 /* ===================================================
