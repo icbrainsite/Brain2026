@@ -389,11 +389,11 @@ body.dark-mode .navbar {
 /* Navigation Menu */
 .navbar-menu {
     display: flex;
-    gap: var(--spacing-xl);
+    gap: var(--spacing-lg);
     list-style: none;
     align-items: center;
-    margin-left: auto;
-    margin-right: var(--spacing-2xl);
+    margin-left: 3rem;
+    margin-right: var(--spacing-lg);
 }
 
 .navbar-menu a {
