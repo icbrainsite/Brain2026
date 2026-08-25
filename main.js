@@ -215,7 +215,7 @@ function initAnimationOnScroll() {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 const statNumber = entry.target.querySelector('.stat-number');
-                if (statNumber && !statNumber.hasAttribute('data-animated')) {
+                if (statNumber && !statNumber.hasAttribute('data-animated') && statNumber.hasAttribute('data-target')) {
                     const target = parseInt(statNumber.getAttribute('data-target'));
                     animateCounter(statNumber, target);
                     statNumber.setAttribute('data-animated', 'true');
