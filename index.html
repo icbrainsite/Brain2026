@@ -72,6 +72,7 @@
             </ul>
             <!-- Right Side Actions -->
             <div class="navbar-actions">
+                <a href="registration.html" class="btn btn-primary btn-small">Register</a>
                 <button class="dark-mode-toggle" id="darkModeToggle" title="Toggle Dark Mode">
                     <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <circle cx="12" cy="12" r="5"></circle>
@@ -88,7 +89,6 @@
                         <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
                     </svg>
                 </button>
-                <a href="registration.html" class="btn btn-primary btn-small">Register</a>
             </div>
         </div>
     </nav>
@@ -111,10 +111,10 @@
                 <!-- Collaboration Logos Placeholder -->
                 <div class="collab-logos-row">
                     <div class="collab-logo-badge">
-                        <img src="NSUT_logo.png" alt="NSUT Logo">
+                        <img src="nsut-logo.png" alt="NSUT Logo">
                     </div>
                     <div class="collab-logo-badge">
-                        <img src="CUT_logo.png" alt="CUT Logo">
+                        <img src="cut-logo.png" alt="CUT Logo">
                     </div>
                 </div>
                 <!-- CTA Buttons -->
@@ -369,8 +369,8 @@
     <section class="highlights-section">
         <div class="container">
             <h2 class="section-title">Conference Highlights</h2>
-            <div class="highlights-grid">
-                <div class="highlight-card" style="--delay: 0s;">
+            <div class="highlights-grid highlights-grid-horizontal">
+                <div class="highlight-card highlight-card-horizontal" style="--delay: 0s;">
                     <div class="highlight-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
@@ -378,10 +378,12 @@
                             <line x1="12" y1="3" x2="12" y2="15"></line>
                         </svg>
                     </div>
-                    <h3>Distinguished Keynote Speakers</h3>
-                    <p>Insights from eminent academicians and industry leaders from India and South Africa</p>
+                    <div class="highlight-card-text">
+                        <h3>Distinguished Keynote Speakers</h3>
+                        <p>Insights from eminent academicians and industry leaders from India and South Africa</p>
+                    </div>
                 </div>
-                <div class="highlight-card" style="--delay: 0.1s;">
+                <div class="highlight-card highlight-card-horizontal" style="--delay: 0.1s;">
                     <div class="highlight-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <rect x="3" y="3" width="18" height="18" rx="2"></rect>
@@ -389,29 +391,35 @@
                             <path d="M9 3v18"></path>
                         </svg>
                     </div>
-                    <h3>8 Conference Tracks</h3>
-                    <p>From marketing and finance to sustainability and sustainable computing</p>
+                    <div class="highlight-card-text">
+                        <h3>8 Conference Tracks</h3>
+                        <p>From marketing and finance to sustainability and sustainable computing</p>
+                    </div>
                 </div>
-                <div class="highlight-card" style="--delay: 0.2s;">
+                <div class="highlight-card highlight-card-horizontal" style="--delay: 0.2s;">
                     <div class="highlight-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"></path>
                             <path d="M12 6v6l4 2"></path>
                         </svg>
                     </div>
-                    <h3>2 Days, Hybrid Mode</h3>
-                    <p>21st-22nd December 2026 — attend in person at NSUT or join online</p>
+                    <div class="highlight-card-text">
+                        <h3>2 Days, Hybrid Mode</h3>
+                        <p>21st-22nd December 2026 — attend in person at NSUT or join online</p>
+                    </div>
                 </div>
-                <div class="highlight-card" style="--delay: 0.3s;">
+                <div class="highlight-card highlight-card-horizontal" style="--delay: 0.3s;">
                     <div class="highlight-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm3.5-9c.83 0 1.5-.67 1.5-1.5S16.33 8 15.5 8 14 8.67 14 9.5s.67 1.5 1.5 1.5zm-7 0c.83 0 1.5-.67 1.5-1.5S9.33 8 8.5 8 7 8.67 7 9.5 7.67 11 8.5 11zm3.5 6.5c2.33 0 4.31-1.46 5.11-3.5H6.89c.8 2.04 2.78 3.5 5.11 3.5z"></path>
                         </svg>
                     </div>
-                    <h3>India-South Africa Collaboration</h3>
-                    <p>Jointly organized with Central University of Technology, Free State, South Africa</p>
+                    <div class="highlight-card-text">
+                        <h3>India-South Africa Collaboration</h3>
+                        <p>Jointly organized with Central University of Technology, Free State, South Africa</p>
+                    </div>
                 </div>
-                <div class="highlight-card" style="--delay: 0.4s;">
+                <div class="highlight-card highlight-card-horizontal" style="--delay: 0.4s;">
                     <div class="highlight-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path>
@@ -419,10 +427,12 @@
                             <polyline points="7 3 7 8 15 8"></polyline>
                         </svg>
                     </div>
-                    <h3>Publication Opportunities</h3>
-                    <p>Selected papers considered for publication in reputed indexed journals</p>
+                    <div class="highlight-card-text">
+                        <h3>Publication Opportunities</h3>
+                        <p>Selected papers considered for publication in reputed indexed journals</p>
+                    </div>
                 </div>
-                <div class="highlight-card" style="--delay: 0.5s;">
+                <div class="highlight-card highlight-card-horizontal" style="--delay: 0.5s;">
                     <div class="highlight-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <circle cx="12" cy="12" r="1"></circle>
@@ -432,8 +442,10 @@
                             <path d="M4.22 19.78l4.24-4.24m5.08-5.08l4.24-4.24"></path>
                         </svg>
                     </div>
-                    <h3>Attractive Cash Prizes</h3>
-                    <p>Overall Best Paper prizes up to ₹15,000 plus Best Paper awards in each track</p>
+                    <div class="highlight-card-text">
+                        <h3>Attractive Cash Prizes</h3>
+                        <p>Overall Best Paper prizes up to ₹15,000 plus Best Paper awards in each track</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -459,46 +471,62 @@
                 <h2 class="section-title">Conference Tracks</h2>
                 <p class="section-subtitle">Eight research tracks under the theme DISTINCT</p>
             </div>
-            <div class="tracks-grid">
-                <div class="track-card">
+            <div class="tracks-grid tracks-grid-horizontal">
+                <div class="track-card track-card-horizontal">
                     <div class="track-icon">📣</div>
-                    <h3>Track 1: Emerging Trends in Marketing</h3>
-                    <p>Digital marketing, consumer behavior, branding, and sustainable marketing practices</p>
+                    <div class="track-card-text">
+                        <h3>Track 1: Emerging Trends in Marketing</h3>
+                        <p>Digital marketing, consumer behavior, branding, and sustainable marketing practices</p>
+                    </div>
                 </div>
-                <div class="track-card">
+                <div class="track-card track-card-horizontal">
                     <div class="track-icon">💰</div>
-                    <h3>Track 2: Finance, Accounting &amp; Economics</h3>
-                    <p>Corporate finance, financial inclusion, accounting standards, and economic policy</p>
+                    <div class="track-card-text">
+                        <h3>Track 2: Finance, Accounting &amp; Economics</h3>
+                        <p>Corporate finance, financial inclusion, accounting standards, and economic policy</p>
+                    </div>
                 </div>
-                <div class="track-card">
+                <div class="track-card track-card-horizontal">
                     <div class="track-icon">🌱</div>
-                    <h3>Track 3: Sustainability &amp; Responsible Business</h3>
-                    <p>ESG practices, circular economy, corporate social responsibility, and green business models</p>
+                    <div class="track-card-text">
+                        <h3>Track 3: Sustainability &amp; Responsible Business</h3>
+                        <p>ESG practices, circular economy, corporate social responsibility, and green business models</p>
+                    </div>
                 </div>
-                <div class="track-card">
+                <div class="track-card track-card-horizontal">
                     <div class="track-icon">🚀</div>
-                    <h3>Track 4: Entrepreneurship &amp; Industry Collaboration</h3>
-                    <p>Startups, venture development, industry-academia partnerships, and innovation ecosystems</p>
+                    <div class="track-card-text">
+                        <h3>Track 4: Entrepreneurship &amp; Industry Collaboration</h3>
+                        <p>Startups, venture development, industry-academia partnerships, and innovation ecosystems</p>
+                    </div>
                 </div>
-                <div class="track-card">
+                <div class="track-card track-card-horizontal">
                     <div class="track-icon">🧑‍💼</div>
-                    <h3>Track 5: Future of Work</h3>
-                    <p>Workplace transformation, hybrid work models, talent management, and organizational culture</p>
+                    <div class="track-card-text">
+                        <h3>Track 5: Future of Work</h3>
+                        <p>Workplace transformation, hybrid work models, talent management, and organizational culture</p>
+                    </div>
                 </div>
-                <div class="track-card">
+                <div class="track-card track-card-horizontal">
                     <div class="track-icon">⚖️</div>
-                    <h3>Track 6: Corporate Governance</h3>
-                    <p>Board effectiveness, ethics, compliance, transparency, and stakeholder accountability</p>
+                    <div class="track-card-text">
+                        <h3>Track 6: Corporate Governance</h3>
+                        <p>Board effectiveness, ethics, compliance, transparency, and stakeholder accountability</p>
+                    </div>
                 </div>
-                <div class="track-card">
+                <div class="track-card track-card-horizontal">
                     <div class="track-icon">🔗</div>
-                    <h3>Track 7: Supply Chain</h3>
-                    <p>Logistics, operations management, supply chain resilience, and sustainable sourcing</p>
+                    <div class="track-card-text">
+                        <h3>Track 7: Supply Chain</h3>
+                        <p>Logistics, operations management, supply chain resilience, and sustainable sourcing</p>
+                    </div>
                 </div>
-                <div class="track-card">
+                <div class="track-card track-card-horizontal">
                     <div class="track-icon">💻</div>
-                    <h3>Track 8: Sustainable Computing</h3>
-                    <p>Green IT, digital transformation, AI for sustainability, and responsible technology adoption</p>
+                    <div class="track-card-text">
+                        <h3>Track 8: Sustainable Computing</h3>
+                        <p>Green IT, digital transformation, AI for sustainability, and responsible technology adoption</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -562,8 +590,9 @@
                 </div>
                 <div class="stat-card">
                     <div class="stat-content">
-                        <p class="stat-label" style="margin-bottom: 0.5rem; font-weight: 600;">Best Paper — Each Track</p>
+                        <p class="stat-label" style="margin-bottom: 0.5rem; font-weight: 600;">Best Paper Award — Each Track</p>
                         <div class="stat-number" style="font-size: 2rem;">₹4,000</div>
+                        <p class="stat-label" style="margin-top: 0.35rem; font-size: var(--font-size-xs); font-weight: 500;">per Track</p>
                     </div>
                 </div>
             </div>
@@ -576,15 +605,21 @@
                 <h2 class="section-title">Keynote Speakers</h2>
                 <p class="section-subtitle">World-class experts and thought leaders</p>
             </div>
-            <div class="speakers-preview-grid" id="speakersPreview">
+            <div class="speakers-preview-grid speakers-preview-grid-2col" id="speakersPreview">
                 <div class="speaker-card-preview">
-                    <div class="speaker-image-placeholder">
-                        <svg viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"></path>
-                        </svg>
-                    </div>
-                    <h3 class="speaker-name">Loading speakers...</h3>
-                    <p class="speaker-title">From JSON</p>
+                    <img src="speaker-sudhir-rana.webp" alt="Dr. Sudhir Rana" class="speaker-photo">
+                    <h3 class="speaker-name">Dr. Sudhir Rana</h3>
+                    <p class="speaker-title">PhD and Post Doctorate, Editor-in-Chief, FIIB Business Review, Associate Professor, LIWA University, Abu Dhabi</p>
+                </div>
+                <div class="speaker-card-preview">
+                    <img src="speaker-freda-van-der-walt.jpeg" alt="Prof. (Dr.) Freda van der Walt" class="speaker-photo">
+                    <h3 class="speaker-name">Prof. (Dr.) Freda van der Walt</h3>
+                    <p class="speaker-title">Dean of the Faculty of Management Sciences, Central University of Technology (CUT), South Africa</p>
+                </div>
+                <div class="speaker-card-preview">
+                    <img src="speaker-arvind-kumar.png" alt="Prof. (Dr.) Arvind Kumar" class="speaker-photo">
+                    <h3 class="speaker-name">Prof. (Dr.) Arvind Kumar</h3>
+                    <p class="speaker-title">Ph.D, Post Doc Fellowship (OWU, USA), Associate Dean: School of Management and Entrepreneurship, ABVSME, JNU</p>
                 </div>
             </div>
             <div class="section-footer-cta">
@@ -648,24 +683,6 @@
                         <span class="timeline-status">Main Event</span>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
-    <!-- Sponsors Preview Section -->
-    <section class="sponsors-preview-section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Our Partners & Sponsors</h2>
-                <p class="section-subtitle">Supported by leading organizations</p>
-            </div>
-            <div class="sponsors-grid" id="sponsorsGrid">
-                <div class="sponsor-placeholder">
-                    <p>Loading sponsors...</p>
-                </div>
-            </div>
-            <div class="section-footer-cta">
-                <p class="partnership-text">Interested in sponsoring BRAIN'26?</p>
-                <a href="sponsors.html" class="btn btn-secondary">Become a Sponsor</a>
             </div>
         </div>
     </section>
