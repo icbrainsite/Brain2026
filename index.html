@@ -110,10 +110,12 @@
                 <p class="hero-description"><strong>DISTINCT:</strong> Driving Inclusive Sustainability Through Innovation, Culture &amp; Technology. Organized by the Department of Management Studies (DMS) and Department of Innovation, Entrepreneurship &amp; Venture Development (DIEV), NSUT, in collaboration with Central University of Technology (CUT), Free State, South Africa.</p>
                 <!-- Collaboration Logos Placeholder -->
                 <div class="collab-logos-row">
-                    <div class="collab-logo-chip">NSUT Logo</div>
-                    <div class="collab-logo-chip">DMS Logo</div>
-                    <div class="collab-logo-chip">DIEV Logo</div>
-                    <div class="collab-logo-chip">CUT South Africa Logo</div>
+                    <div class="collab-logo-badge">
+                        <img src="nsut-logo.png" alt="NSUT Logo">
+                    </div>
+                    <div class="collab-logo-badge">
+                        <img src="cut-logo.png" alt="CUT Logo">
+                    </div>
                 </div>
                 <!-- CTA Buttons -->
                 <div class="hero-buttons">
@@ -218,9 +220,39 @@
             </div>
             <div class="announcements-grid" id="announcementsGrid">
                 <div class="announcement-card">
-                    <div class="announcement-body">
-                        <p class="announcement-title">Loading announcements...</p>
+                    <span class="announcement-badge">Live</span>
+                    <div class="announcement-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 11l3 3L22 4"></path>
+                            <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
+                        </svg>
                     </div>
+                    <h3 class="announcement-title">Registrations Open</h3>
+                    <p class="announcement-text">Registration for BRAIN'26 is now open! Secure your spot at the IInd Annual International Conference before slots fill up.</p>
+                    <a href="registration.html" class="announcement-link">
+                        <span>Register Now</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"></path>
+                        </svg>
+                    </a>
+                </div>
+                <div class="announcement-card">
+                    <span class="announcement-badge">New</span>
+                    <div class="announcement-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <polyline points="7 10 12 15 17 10"></polyline>
+                            <line x1="12" y1="15" x2="12" y2="3"></line>
+                        </svg>
+                    </div>
+                    <h3 class="announcement-title">Download Brochure</h3>
+                    <p class="announcement-text">Get all the details on tracks, dates, fees and submission guidelines in our official conference brochure.</p>
+                    <a href="downloads.html" class="announcement-link">
+                        <span>Download Now</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"></path>
+                        </svg>
+                    </a>
                 </div>
             </div>
         </div>
@@ -232,18 +264,20 @@
                 <h2 class="section-title">About BRAIN'26</h2>
                 <p class="section-subtitle">Driving Inclusive Sustainability Through Innovation, Culture &amp; Technology</p>
             </div>
-            <div class="about-grid">
-                <div class="about-card fade-in-up">
+            <div class="about-grid about-grid-horizontal">
+                <div class="about-card about-card-horizontal fade-in-up">
                     <div class="about-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"></path>
                             <path d="M12 6v6l4.5 2.7"></path>
                         </svg>
                     </div>
-                    <h3>Inclusive Sustainability</h3>
-                    <p>BRAIN'26 brings together academicians, researchers, and industry leaders to explore inclusive and sustainable pathways for business and society through innovation, culture and technology.</p>
+                    <div class="about-card-text">
+                        <h3>Inclusive Sustainability</h3>
+                        <p>BRAIN'26 brings together academicians, researchers, and industry leaders to explore inclusive and sustainable pathways for business and society through innovation, culture and technology.</p>
+                    </div>
                 </div>
-                <div class="about-card fade-in-up">
+                <div class="about-card about-card-horizontal fade-in-up">
                     <div class="about-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
@@ -252,26 +286,32 @@
                             <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
                         </svg>
                     </div>
-                    <h3>International Collaboration</h3>
-                    <p>Jointly organized by the Department of Management Studies (DMS) and Department of Innovation, Entrepreneurship &amp; Venture Development (DIEV), NSUT, in collaboration with Central University of Technology (CUT), Free State, South Africa.</p>
+                    <div class="about-card-text">
+                        <h3>International Collaboration</h3>
+                        <p>Jointly organized by the Department of Management Studies (DMS) and Department of Innovation, Entrepreneurship &amp; Venture Development (DIEV), NSUT, in collaboration with Central University of Technology (CUT), Free State, South Africa.</p>
+                    </div>
                 </div>
-                <div class="about-card fade-in-up">
+                <div class="about-card about-card-horizontal fade-in-up">
                     <div class="about-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
                         </svg>
                     </div>
-                    <h3>Hybrid Participation</h3>
-                    <p>Join us in person at the NSUT campus in New Delhi or participate virtually — BRAIN'26 is being conducted in hybrid mode for wider accessibility.</p>
+                    <div class="about-card-text">
+                        <h3>Hybrid Participation</h3>
+                        <p>Join us in person at the NSUT campus in New Delhi or participate virtually — BRAIN'26 is being conducted in hybrid mode for wider accessibility.</p>
+                    </div>
                 </div>
-                <div class="about-card fade-in-up">
+                <div class="about-card about-card-horizontal fade-in-up">
                     <div class="about-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"></path>
                         </svg>
                     </div>
-                    <h3>Quality Publications</h3>
-                    <p>Selected papers will be considered for publication in reputed indexed journals, with rigorous blind peer review ensuring academic quality.</p>
+                    <div class="about-card-text">
+                        <h3>Quality Publications</h3>
+                        <p>Selected papers will be considered for publication in reputed indexed journals, with rigorous blind peer review ensuring academic quality.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -856,7 +896,6 @@
     <!-- JavaScript Files -->
     <script src="main.js" defer></script>
     <script src="countdown.js" defer></script>
-    <script src="announcements.js" defer></script>
     <script src="darkmode.js" defer></script>
 </body>
 </html>
