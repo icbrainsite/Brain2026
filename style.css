@@ -645,22 +645,35 @@ body.dark-mode .dark-mode-toggle .moon-icon {
     justify-content: center;
 }
 
-/* Collaboration logo chips — redesigned for the dark photo backdrop */
+/* Collaboration logos — white badge so PNGs stay crisp against the dark photo backdrop */
 .collab-logos-row {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: var(--spacing-lg);
+    gap: var(--spacing-xl);
     margin-bottom: var(--spacing-xl);
     flex-wrap: wrap;
 }
 
-.collab-logo-chip {
-    padding: 0.5rem 1rem;
-    border: 1px dashed rgba(255, 255, 255, 0.4);
-    border-radius: var(--radius-md);
-    font-size: var(--font-size-xs);
-    color: rgba(255, 255, 255, 0.85);
+.collab-logo-badge {
+    background: white;
+    padding: 0.65rem 1.5rem;
+    border-radius: var(--radius-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+    transition: transform var(--transition-base);
+}
+
+.collab-logo-badge:hover {
+    transform: translateY(-3px);
+}
+
+.collab-logo-badge img {
+    height: 52px;
+    width: auto;
+    display: block;
 }
 
 /* Hero Info Bar — horizontal strip below the buttons,
@@ -818,6 +831,101 @@ body.dark-mode .dark-mode-toggle .moon-icon {
 }
 
 /* ===================================================
+   LATEST UPDATES & ANNOUNCEMENTS SECTION
+   =================================================== */
+.announcements-section {
+    background: var(--background-color);
+}
+
+.announcements-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-2xl);
+}
+
+.announcement-card {
+    position: relative;
+    background: var(--card-bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-2xl);
+    padding: var(--spacing-2xl);
+    box-shadow: var(--shadow-md);
+    transition: all var(--transition-base);
+}
+
+.announcement-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-xl);
+    border-color: var(--primary-color);
+}
+
+.announcement-badge {
+    display: inline-block;
+    padding: 4px 14px;
+    border-radius: var(--radius-full);
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    font-size: var(--font-size-xs);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: var(--spacing-lg);
+}
+
+.announcement-icon {
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    border-radius: var(--radius-xl);
+    margin-bottom: var(--spacing-lg);
+}
+
+.announcement-icon svg {
+    width: 28px;
+    height: 28px;
+}
+
+.announcement-title {
+    color: var(--text-color);
+    font-size: var(--font-size-xl);
+    margin-bottom: var(--spacing-sm);
+}
+
+.announcement-text {
+    color: var(--text-light);
+    line-height: 1.7;
+    margin-bottom: var(--spacing-lg);
+}
+
+.announcement-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.announcement-link svg {
+    width: 18px;
+    height: 18px;
+    transition: transform var(--transition-base);
+}
+
+.announcement-link:hover svg {
+    transform: translateX(4px);
+}
+
+@media (max-width: 767px) {
+    .announcements-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ===================================================
    ANNOUNCEMENT TICKER
    =================================================== */
 .announcement-section {
@@ -942,6 +1050,43 @@ body.dark-mode .dark-mode-toggle .moon-icon {
 .about-card p {
     color: var(--text-light);
     line-height: 1.8;
+}
+
+/* Horizontal variant — used only by the "About BRAIN'26" grid on the
+   homepage. Fixed 2 columns, icon + text side by side, so text always
+   stays inside the box regardless of content length. */
+.about-grid-horizontal {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.about-card-horizontal {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-lg);
+    text-align: left;
+}
+
+.about-card-horizontal .about-icon {
+    margin-bottom: 0;
+    flex-shrink: 0;
+}
+
+.about-card-text h3 {
+    color: var(--text-color);
+    margin-bottom: var(--spacing-sm);
+}
+
+.about-card-text p {
+    color: var(--text-light);
+    line-height: 1.7;
+    margin-bottom: 0;
+}
+
+@media (max-width: 575px) {
+    .about-card-horizontal {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 }
 
 /* ===================================================
