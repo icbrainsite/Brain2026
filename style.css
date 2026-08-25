@@ -497,6 +497,8 @@ body.dark-mode .dark-mode-toggle .moon-icon {
 
 /* ===================================================
    HERO SECTION
+   Full-bleed campus photo banner, centered content —
+   styled after the PAN-IIM Shillong conference hero.
    =================================================== */
 .hero {
     position: relative;
@@ -506,45 +508,30 @@ body.dark-mode .dark-mode-toggle .moon-icon {
     justify-content: center;
     padding-top: 70px;
     overflow: hidden;
-    background-image:
-        linear-gradient(135deg, rgba(248,249,252,0.94), rgba(248,249,252,0.88) 55%, rgba(248,249,252,0.94)),
-        url('campus-bg.jpeg');
+    background-image: url('campus-bg.jpeg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 
-body.dark-mode .hero {
-    background-image:
-        linear-gradient(135deg, rgba(15,23,42,0.94), rgba(15,23,42,0.88) 55%, rgba(15,23,42,0.94)),
-        url('campus-bg.jpeg');
+/* Dark gradient wash so the photo stays bold and visible
+   while white text on top stays fully readable */
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(180deg,
+        rgba(10,6,40,0.78) 0%,
+        rgba(23,9,110,0.62) 45%,
+        rgba(10,6,40,0.85) 100%);
 }
 
-/* Animated Background */
+/* Animated Background (decorative shapes, sit above the photo/overlay) */
 .animated-bg {
     position: absolute;
     inset: 0;
     overflow: hidden;
-}
-
-.animated-gradient {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(135deg, 
-        rgba(23, 9, 110, 0.1),
-        rgba(176, 120, 21, 0.05),
-        rgba(137, 13, 13, 0.1)
-    );
-    animation: gradientShift 8s ease infinite;
-}
-
-@keyframes gradientShift {
-    0%, 100% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
+    z-index: 2;
 }
 
 .floating-shape {
@@ -613,56 +600,77 @@ body.dark-mode .hero {
 .hero-content {
     position: relative;
     z-index: 10;
-    max-width: 1200px;
+    max-width: 900px;
     width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: var(--spacing-4xl);
-    align-items: center;
     padding: 0 var(--spacing-lg);
     margin: 0 auto;
+    text-align: center;
 }
 
 .hero-text {
-    text-align: left;
+    text-align: center;
 }
 
 .hero-title {
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: white;
     font-size: clamp(3rem, 8vw, 5rem);
     line-height: 1.1;
     margin-bottom: var(--spacing-lg);
+    text-shadow: 0 4px 20px rgba(0,0,0,0.35);
 }
 
 .hero-subtitle {
     font-size: var(--font-size-3xl);
-    color: var(--text-color);
+    color: rgba(255, 255, 255, 0.95);
     font-weight: 600;
     margin-bottom: var(--spacing-lg);
 }
 
 .hero-description {
     font-size: var(--font-size-lg);
-    color: var(--text-light);
-    margin-bottom: var(--spacing-2xl);
+    color: rgba(255, 255, 255, 0.85);
+    margin: 0 auto var(--spacing-2xl);
     line-height: 1.8;
-    max-width: 500px;
+    max-width: 640px;
 }
 
 .hero-buttons {
     display: flex;
     gap: var(--spacing-lg);
     flex-wrap: wrap;
+    justify-content: center;
 }
 
-/* Hero Cards */
-.hero-cards {
+/* Collaboration logo chips — redesigned for the dark photo backdrop */
+.collab-logos-row {
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-xl);
+    flex-wrap: wrap;
+}
+
+.collab-logo-chip {
+    padding: 0.5rem 1rem;
+    border: 1px dashed rgba(255, 255, 255, 0.4);
+    border-radius: var(--radius-md);
+    font-size: var(--font-size-xs);
+    color: rgba(255, 255, 255, 0.85);
+}
+
+/* Hero Info Bar — horizontal strip below the buttons,
+   styled after the reference site's Date | Venue bar */
+.hero-info-bar {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--spacing-lg);
+    max-width: 1000px;
+    margin: var(--spacing-3xl) auto 0;
+    padding: 0 var(--spacing-lg);
     animation: floatUp 1s ease-out 0.2s both;
 }
 
@@ -670,39 +678,32 @@ body.dark-mode .hero {
     display: flex;
     align-items: center;
     gap: var(--spacing-lg);
-    padding: var(--spacing-xl);
-    background: rgba(255, 255, 255, 0.6);
+    padding: var(--spacing-lg) var(--spacing-xl);
+    background: rgba(255, 255, 255, 0.12);
     backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: var(--radius-2xl);
     transition: all var(--transition-base);
-}
-
-body.dark-mode .hero-card {
-    background: rgba(30, 41, 59, 0.6);
-    border-color: rgba(255, 255, 255, 0.1);
+    flex: 1 1 220px;
+    max-width: 280px;
 }
 
 .hero-card:hover {
     transform: translateY(-5px);
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.2);
     box-shadow: var(--shadow-xl);
 }
 
-body.dark-mode .hero-card:hover {
-    background: rgba(30, 41, 59, 0.8);
-}
-
 .hero-card svg {
-    width: 40px;
-    height: 40px;
-    color: var(--primary-color);
+    width: 36px;
+    height: 36px;
+    color: white;
     flex-shrink: 0;
 }
 
 .card-label {
     font-size: var(--font-size-sm);
-    color: var(--text-lighter);
+    color: rgba(255, 255, 255, 0.7);
     text-transform: uppercase;
     letter-spacing: 0.5px;
     margin-bottom: var(--spacing-xs);
@@ -711,7 +712,7 @@ body.dark-mode .hero-card:hover {
 .card-value {
     font-size: var(--font-size-lg);
     font-weight: 600;
-    color: var(--text-color);
+    color: white;
 }
 
 /* Scroll Indicator */
