@@ -521,9 +521,9 @@ body.dark-mode .dark-mode-toggle .moon-icon {
     inset: 0;
     z-index: 1;
     background: linear-gradient(180deg,
-        rgba(10,6,40,0.78) 0%,
-        rgba(23,9,110,0.62) 45%,
-        rgba(10,6,40,0.85) 100%);
+        rgba(10,6,40,0.35) 0%,
+        rgba(23,9,110,0.2) 45%,
+        rgba(10,6,40,0.45) 100%);
 }
 
 /* Animated Background (decorative shapes, sit above the photo/overlay) */
@@ -602,9 +602,13 @@ body.dark-mode .dark-mode-toggle .moon-icon {
     z-index: 10;
     max-width: 900px;
     width: 100%;
-    padding: 0 var(--spacing-lg);
+    padding: var(--spacing-2xl) var(--spacing-2xl);
     margin: 0 auto;
     text-align: center;
+    background: rgba(10, 6, 40, 0.4);
+    backdrop-filter: blur(6px);
+    border-radius: var(--radius-2xl);
+    border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 .hero-text {
