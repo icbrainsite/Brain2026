@@ -94,13 +94,14 @@
     </nav>
     <!-- Hero Section -->
     <section class="hero">
-        <!-- Animated Background -->
+        <!-- Dark wash over the campus photo so text stays readable -->
+        <div class="hero-overlay"></div>
+        <!-- Decorative floating shapes -->
         <div class="animated-bg">
             <div class="floating-shape shape-1"></div>
             <div class="floating-shape shape-2"></div>
             <div class="floating-shape shape-3"></div>
             <div class="floating-shape shape-4"></div>
-            <div class="animated-gradient"></div>
         </div>
         <div class="hero-content">
             <div class="hero-text fade-in-up">
@@ -108,11 +109,11 @@
                 <p class="hero-subtitle">IInd Annual International Conference</p>
                 <p class="hero-description"><strong>DISTINCT:</strong> Driving Inclusive Sustainability Through Innovation, Culture &amp; Technology. Organized by the Department of Management Studies (DMS) and Department of Innovation, Entrepreneurship &amp; Venture Development (DIEV), NSUT, in collaboration with Central University of Technology (CUT), Free State, South Africa.</p>
                 <!-- Collaboration Logos Placeholder -->
-                <div class="collab-logos-placeholder" style="display: flex; align-items: center; gap: 1.5rem; margin-bottom: 1.5rem; flex-wrap: wrap;">
-                    <div style="padding: 0.5rem 1rem; border: 1px dashed var(--border-color); border-radius: 0.5rem; font-size: 0.8rem; color: var(--text-lighter);">NSUT Logo</div>
-                    <div style="padding: 0.5rem 1rem; border: 1px dashed var(--border-color); border-radius: 0.5rem; font-size: 0.8rem; color: var(--text-lighter);">DMS Logo</div>
-                    <div style="padding: 0.5rem 1rem; border: 1px dashed var(--border-color); border-radius: 0.5rem; font-size: 0.8rem; color: var(--text-lighter);">DIEV Logo</div>
-                    <div style="padding: 0.5rem 1rem; border: 1px dashed var(--border-color); border-radius: 0.5rem; font-size: 0.8rem; color: var(--text-lighter);">CUT South Africa Logo</div>
+                <div class="collab-logos-row">
+                    <div class="collab-logo-chip">NSUT Logo</div>
+                    <div class="collab-logo-chip">DMS Logo</div>
+                    <div class="collab-logo-chip">DIEV Logo</div>
+                    <div class="collab-logo-chip">CUT South Africa Logo</div>
                 </div>
                 <!-- CTA Buttons -->
                 <div class="hero-buttons">
@@ -139,41 +140,41 @@
                     </a>
                 </div>
             </div>
-            <!-- Hero Info Cards -->
-            <div class="hero-cards fade-in-down">
-                <div class="hero-card">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <rect x="3" y="4" width="18" height="18" rx="2"></rect>
-                        <line x1="16" y1="2" x2="16" y2="6"></line>
-                        <line x1="8" y1="2" x2="8" y2="6"></line>
-                        <line x1="3" y1="10" x2="21" y2="10"></line>
-                    </svg>
-                    <div>
-                        <p class="card-label">Date</p>
-                        <p class="card-value">21-22 Dec 2026</p>
-                    </div>
+        </div>
+        <!-- Hero Info Bar -->
+        <div class="hero-info-bar fade-in-down">
+            <div class="hero-card">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="3" y="4" width="18" height="18" rx="2"></rect>
+                    <line x1="16" y1="2" x2="16" y2="6"></line>
+                    <line x1="8" y1="2" x2="8" y2="6"></line>
+                    <line x1="3" y1="10" x2="21" y2="10"></line>
+                </svg>
+                <div>
+                    <p class="card-label">Date</p>
+                    <p class="card-value">21-22 Dec 2026</p>
                 </div>
-                <div class="hero-card">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                        <circle cx="12" cy="10" r="3"></circle>
-                    </svg>
-                    <div>
-                        <p class="card-label">Venue</p>
-                        <p class="card-value">NSUT, New Delhi (Hybrid)</p>
-                    </div>
+            </div>
+            <div class="hero-card">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+                <div>
+                    <p class="card-label">Venue</p>
+                    <p class="card-value">NSUT, New Delhi (Hybrid)</p>
                 </div>
-                <div class="hero-card">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                        <circle cx="9" cy="7" r="4"></circle>
-                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                    </svg>
-                    <div>
-                        <p class="card-label">Organized By</p>
-                        <p class="card-value">DMS &amp; DIEV, NSUT</p>
-                    </div>
+            </div>
+            <div class="hero-card">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="9" cy="7" r="4"></circle>
+                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                </svg>
+                <div>
+                    <p class="card-label">Organized By</p>
+                    <p class="card-value">DMS &amp; DIEV, NSUT</p>
                 </div>
             </div>
         </div>
