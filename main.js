@@ -2,14 +2,11 @@
 // BRAIN2026 CONFERENCE WEBSITE
 // Main JavaScript (main.js)
 // ===================================================
-
 // ===================================================
 // DOCUMENT READY - Initialize Everything
 // ===================================================
-
 document.addEventListener('DOMContentLoaded', function() {
     console.log('Brain2026 Website Initialized');
-
     // Initialize all functions
     initNavigation();
     initDarkMode();
@@ -23,11 +20,9 @@ document.addEventListener('DOMContentLoaded', function() {
     initAnimationOnScroll();
     initNavigationActiveState();
 });
-
 // ===================================================
 // LOADING SCREEN
 // ===================================================
-
 function initLoadingScreen() {
     // Hide loading screen after 1 second
     setTimeout(() => {
@@ -37,17 +32,14 @@ function initLoadingScreen() {
         }
     }, 1000);
 }
-
 // ===================================================
 // NAVIGATION
 // ===================================================
-
 function initNavigation() {
     const hamburgerMenu = document.getElementById('hamburgerMenu');
     const navbarMenu = document.getElementById('navbarMenu');
     const navLinks = document.querySelectorAll('.nav-link');
     const navbar = document.querySelector('.navbar');
-
     // Toggle mobile menu
     if (hamburgerMenu) {
         hamburgerMenu.addEventListener('click', () => {
@@ -55,7 +47,6 @@ function initNavigation() {
             navbarMenu.classList.toggle('active');
         });
     }
-
     // Close menu when clicking on a link
     navLinks.forEach(link => {
         link.addEventListener('click', () => {
@@ -63,7 +54,6 @@ function initNavigation() {
             navbarMenu.classList.remove('active');
         });
     });
-
     // Add navbar blur on scroll
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
@@ -79,21 +69,17 @@ function initNavigation() {
         }
     });
 }
-
 // ===================================================
 // DARK MODE
 // ===================================================
-
 function initDarkMode() {
     const darkModeToggle = document.getElementById('darkModeToggle');
     const body = document.body;
-
     // Check for saved dark mode preference
     const isDarkMode = localStorage.getItem('darkMode') === 'enabled';
     if (isDarkMode) {
         body.classList.add('dark-mode');
     }
-
     // Toggle dark mode
     if (darkModeToggle) {
         darkModeToggle.addEventListener('click', () => {
@@ -107,20 +93,16 @@ function initDarkMode() {
         });
     }
 }
-
 // ===================================================
 // SMOOTH SCROLL
 // ===================================================
-
 function initSmoothScroll() {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             const href = this.getAttribute('href');
             
             if (href === '#' || href === '') return;
-
             e.preventDefault();
-
             const target = document.querySelector(href);
             if (target) {
                 const headerHeight = 70;
@@ -134,14 +116,11 @@ function initSmoothScroll() {
         });
     });
 }
-
 // ===================================================
 // SCROLL PROGRESS BAR
 // ===================================================
-
 function initScrollProgressBar() {
     const progressBar = document.getElementById('scrollProgressBar');
-
     if (progressBar) {
         window.addEventListener('scroll', () => {
             const scrollTop = window.scrollY;
@@ -151,11 +130,9 @@ function initScrollProgressBar() {
         });
     }
 }
-
 // ===================================================
 // SCROLL EFFECTS
 // ===================================================
-
 function initScrollEffects() {
     // Navbar shadow on scroll
     const navbar = document.querySelector('.navbar');
@@ -167,7 +144,6 @@ function initScrollEffects() {
             navbar.style.boxShadow = 'none';
         }
     });
-
     // Parallax effect for hero section
     const hero = document.querySelector('.hero');
     if (hero) {
@@ -182,14 +158,11 @@ function initScrollEffects() {
         });
     }
 }
-
 // ===================================================
 // BACK TO TOP BUTTON
 // ===================================================
-
 function initBackToTop() {
     const backToTopBtn = document.getElementById('backToTopBtn');
-
     if (backToTopBtn) {
         window.addEventListener('scroll', () => {
             if (window.scrollY > 300) {
@@ -198,7 +171,6 @@ function initBackToTop() {
                 backToTopBtn.classList.remove('show');
             }
         });
-
         backToTopBtn.addEventListener('click', () => {
             window.scrollTo({
                 top: 0,
@@ -207,50 +179,38 @@ function initBackToTop() {
         });
     }
 }
-
 // ===================================================
 // ANIMATED COUNTER
 // ===================================================
-
 function animateCounter(element, target, duration = 2000) {
     const startValue = 0;
     const startTime = Date.now();
-
     function updateCounter() {
         const currentTime = Date.now();
         const elapsed = currentTime - startTime;
         const progress = Math.min(elapsed / duration, 1);
-
         // Easing function (ease-out)
         const easeProgress = 1 - Math.pow(1 - progress, 3);
         const currentValue = Math.floor(startValue + (target - startValue) * easeProgress);
-
         element.textContent = currentValue;
-
         if (progress < 1) {
             requestAnimationFrame(updateCounter);
         } else {
             element.textContent = target;
         }
     }
-
     updateCounter();
 }
-
 // ===================================================
 // ANIMATE STATISTICS ON SCROLL
 // ===================================================
-
 function initAnimationOnScroll() {
     const statCards = document.querySelectorAll('.stat-card');
-
     if (statCards.length === 0) return;
-
     const observerOptions = {
         threshold: 0.5,
         rootMargin: '0px'
     };
-
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -264,62 +224,66 @@ function initAnimationOnScroll() {
             }
         });
     }, observerOptions);
-
     statCards.forEach(card => observer.observe(card));
 }
-
 // ===================================================
 // NEWSLETTER FORM
 // ===================================================
-
 function initNewsletterForm() {
     const newsletterForm = document.getElementById('newsletterForm');
-
     if (newsletterForm) {
         newsletterForm.addEventListener('submit', handleNewsletterSubmit);
     }
 }
-
 function handleNewsletterSubmit(e) {
     e.preventDefault();
-
     const form = e.target;
     const input = form.querySelector('input[type="email"]');
     const email = input.value;
-
     if (!email) return;
-
     // Validate email
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
         alert('Please enter a valid email address');
         return;
     }
-
+    // Record the subscriber's email.
+    // NOTE: this is a static site with no backend, so this stores the
+    // email in the visitor's own browser (localStorage) under the key
+    // 'brain26_newsletter_subscribers'. It is NOT a shared, cross-visitor
+    // database — it only persists on this device/browser. To collect
+    // emails from all visitors in one place, connect this form to a
+    // backend or form service (e.g. Google Forms, Formspree, Mailchimp)
+    // and this function can be updated to submit there instead/as well.
+    try {
+        const key = 'brain26_newsletter_subscribers';
+        const existing = JSON.parse(localStorage.getItem(key) || '[]');
+        if (!existing.includes(email)) {
+            existing.push({ email: email, subscribedAt: new Date().toISOString() });
+            localStorage.setItem(key, JSON.stringify(existing));
+        }
+    } catch (err) {
+        console.error('Could not store subscriber email:', err);
+    }
     // Simulate form submission
     const button = form.querySelector('button');
     const originalText = button.textContent;
-
     button.textContent = 'Subscribed!';
     button.disabled = true;
     input.disabled = true;
-
     setTimeout(() => {
         button.textContent = originalText;
         button.disabled = false;
         input.disabled = false;
         input.value = '';
-        alert('Thank you for subscribing to Brain2026 updates!');
+        alert("You've been subscribed to the updates of Brain'26");
     }, 2000);
 }
-
 // ===================================================
 // FAQ TOGGLE
 // ===================================================
-
 function initFAQ() {
     const faqItems = document.querySelectorAll('.faq-item');
-
     faqItems.forEach(item => {
         const question = item.querySelector('.faq-question');
         
@@ -331,14 +295,12 @@ function initFAQ() {
                         otherItem.classList.remove('active');
                     }
                 });
-
                 // Toggle current item
                 item.classList.toggle('active');
             });
         }
     });
 }
-
 function toggleFAQ(element) {
     const faqItem = element.closest('.faq-item');
     if (faqItem) {
@@ -348,24 +310,19 @@ function toggleFAQ(element) {
                 item.classList.remove('active');
             }
         });
-
         // Toggle current item
         faqItem.classList.toggle('active');
     }
 }
-
 // ===================================================
 // NAVIGATION ACTIVE STATE
 // ===================================================
-
 function initNavigationActiveState() {
     const navLinks = document.querySelectorAll('.nav-link');
     const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-
     navLinks.forEach(link => {
         const href = link.getAttribute('href');
         const linkPage = href.split('/').pop();
-
         if (linkPage === currentPage || 
             (currentPage === '' && href === './index.html') ||
             (currentPage === 'index.html' && href === './index.html')) {
@@ -375,14 +332,11 @@ function initNavigationActiveState() {
         }
     });
 }
-
 // ===================================================
 // LAZY LOADING FOR IMAGES
 // ===================================================
-
 function initLazyLoading() {
     const images = document.querySelectorAll('img[data-src]');
-
     if ('IntersectionObserver' in window) {
         const imageObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
@@ -394,7 +348,6 @@ function initLazyLoading() {
                 }
             });
         });
-
         images.forEach(img => imageObserver.observe(img));
     } else {
         // Fallback for browsers that don't support IntersectionObserver
@@ -404,27 +357,21 @@ function initLazyLoading() {
         });
     }
 }
-
 // ===================================================
 // DOWNLOAD BROCHURE
 // ===================================================
 // The Download Brochure button now links directly to downloads.html
 // (see index.html), so no click-intercept / placeholder alert is needed here.
-
 // ===================================================
 // ANIMATION ON SCROLL (REVEAL ELEMENTS)
 // ===================================================
-
 function initScrollRevealAnimations() {
     const elements = document.querySelectorAll('[data-animate]');
-
     if (elements.length === 0) return;
-
     const observerOptions = {
         threshold: 0.1,
         rootMargin: '0px 0px -50px 0px'
     };
-
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -434,23 +381,18 @@ function initScrollRevealAnimations() {
             }
         });
     }, observerOptions);
-
     elements.forEach(element => observer.observe(element));
 }
-
 // ===================================================
 // FORM VALIDATION
 // ===================================================
-
 function validateEmail(email) {
     const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return regex.test(email);
 }
-
 function validateForm(form) {
     const inputs = form.querySelectorAll('input[required], textarea[required], select[required]');
     let isValid = true;
-
     inputs.forEach(input => {
         if (!input.value.trim()) {
             input.style.borderColor = '#890D0D';
@@ -458,20 +400,16 @@ function validateForm(form) {
         } else {
             input.style.borderColor = '';
         }
-
         if (input.type === 'email' && !validateEmail(input.value)) {
             input.style.borderColor = '#890D0D';
             isValid = false;
         }
     });
-
     return isValid;
 }
-
 // ===================================================
 // UTILITY FUNCTIONS
 // ===================================================
-
 // Debounce function for scroll events
 function debounce(func, delay) {
     let timeoutId;
@@ -480,7 +418,6 @@ function debounce(func, delay) {
         timeoutId = setTimeout(() => func(...args), delay);
     };
 }
-
 // Throttle function for scroll events
 function throttle(func, delay) {
     let lastCall = 0;
@@ -492,7 +429,6 @@ function throttle(func, delay) {
         }
     };
 }
-
 // Get element position
 function getElementPosition(element) {
     const rect = element.getBoundingClientRect();
@@ -503,7 +439,6 @@ function getElementPosition(element) {
         right: rect.right + window.scrollX
     };
 }
-
 // Check if element is in viewport
 function isElementInViewport(element) {
     const rect = element.getBoundingClientRect();
@@ -514,11 +449,9 @@ function isElementInViewport(element) {
         rect.right <= (window.innerWidth || document.documentElement.clientWidth)
     );
 }
-
 // ===================================================
 // PERFORMANCE MONITORING
 // ===================================================
-
 // Log performance metrics
 function logPerformanceMetrics() {
     window.addEventListener('load', () => {
@@ -534,31 +467,24 @@ function logPerformanceMetrics() {
                 'DOM Complete': timing.domComplete - navigationStart,
                 'Page Load Time': timing.loadEventEnd - navigationStart
             };
-
             console.log('Performance Metrics:', metrics);
         }
     });
 }
-
 // Call performance monitoring if in development
 if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
     logPerformanceMetrics();
 }
-
 // ===================================================
 // ERROR HANDLING
 // ===================================================
-
 window.addEventListener('error', (event) => {
     console.error('Global Error:', event.error);
 });
-
 window.addEventListener('unhandledrejection', (event) => {
     console.error('Unhandled Promise Rejection:', event.reason);
 });
-
 // ===================================================
 // INITIALIZATION COMPLETE
 // ===================================================
-
 console.log('Brain2026 - All scripts loaded successfully');
