@@ -351,7 +351,7 @@ body.dark-mode .navbar {
 .navbar-container {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
     height: 100%;
     max-width: 1200px;
     margin: 0 auto;
@@ -392,6 +392,8 @@ body.dark-mode .navbar {
     gap: var(--spacing-xl);
     list-style: none;
     align-items: center;
+    margin-left: auto;
+    margin-right: var(--spacing-2xl);
 }
 
 .navbar-menu a {
@@ -1090,6 +1092,43 @@ body.dark-mode .dark-mode-toggle .moon-icon {
 }
 
 /* ===================================================
+   THEME SECTION (DISTINCT)
+   Bold, centered banner highlighting the conference theme
+   =================================================== */
+.theme-section {
+    position: relative;
+    background: linear-gradient(135deg, var(--primary-color), #2E1A8F 55%, var(--accent-color));
+    text-align: center;
+    padding: var(--spacing-4xl) 0;
+    overflow: hidden;
+}
+
+.theme-eyebrow {
+    color: rgba(255, 255, 255, 0.75);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 700;
+    font-size: var(--font-size-sm);
+    margin-bottom: var(--spacing-md);
+}
+
+.theme-section h2 {
+    color: white;
+    font-size: clamp(3rem, 9vw, 6rem);
+    font-weight: 800;
+    letter-spacing: 6px;
+    margin-bottom: var(--spacing-lg);
+    text-shadow: 0 6px 30px rgba(0, 0, 0, 0.35);
+}
+
+.theme-description {
+    color: rgba(255, 255, 255, 0.92);
+    font-size: var(--font-size-xl);
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+/* ===================================================
    WHY ATTEND SECTION
    =================================================== */
 .why-attend-section {
@@ -1197,6 +1236,41 @@ body.dark-mode .dark-mode-toggle .moon-icon {
     line-height: 1.8;
 }
 
+/* Horizontal variant — same 2-column, icon+text pattern as About BRAIN'26 */
+.highlights-grid-horizontal {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.highlight-card-horizontal {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-lg);
+    text-align: left;
+}
+
+.highlight-card-horizontal .highlight-icon {
+    margin: 0;
+    flex-shrink: 0;
+}
+
+.highlight-card-text h3 {
+    color: var(--text-color);
+    margin-bottom: var(--spacing-sm);
+}
+
+.highlight-card-text p {
+    color: var(--text-light);
+    line-height: 1.7;
+    margin-bottom: 0;
+}
+
+@media (max-width: 575px) {
+    .highlight-card-horizontal {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
 /* ===================================================
    STATISTICS SECTION
    =================================================== */
@@ -1295,6 +1369,43 @@ body.dark-mode .dark-mode-toggle .moon-icon {
     line-height: 1.8;
 }
 
+/* Horizontal variant — same 2-column, icon+text pattern as About BRAIN'26 */
+.tracks-grid-horizontal {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.track-card-horizontal {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-lg);
+    text-align: left;
+}
+
+.track-card-horizontal .track-icon {
+    margin: 0;
+    flex-shrink: 0;
+    font-size: 2.5rem;
+    line-height: 1;
+}
+
+.track-card-text h3 {
+    color: var(--text-color);
+    margin-bottom: var(--spacing-sm);
+}
+
+.track-card-text p {
+    color: var(--text-light);
+    line-height: 1.7;
+    margin-bottom: 0;
+}
+
+@media (max-width: 575px) {
+    .track-card-horizontal {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
 /* ===================================================
    CAMPUS SECTION (index.html — "Hosted At" block)
    Uses the same shared campus photo as .page-hero so
@@ -1375,6 +1486,28 @@ body.dark-mode .dark-mode-toggle .moon-icon {
     border-color: var(--primary-color);
 }
 
+/* Two-column layout — one speaker per column, third wraps to its own row */
+.speakers-preview-grid-2col {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+@media (max-width: 767px) {
+    .speakers-preview-grid-2col {
+        grid-template-columns: 1fr;
+    }
+}
+
+.speaker-photo {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto var(--spacing-lg);
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    border: 4px solid var(--card-bg-color);
+    box-shadow: var(--shadow-lg);
+}
+
 .speaker-image-placeholder {
     width: 120px;
     height: 120px;
@@ -1400,8 +1533,9 @@ body.dark-mode .dark-mode-toggle .moon-icon {
 }
 
 .speaker-title {
-    color: var(--text-lighter);
+    color: var(--text-light);
     font-size: var(--font-size-sm);
+    line-height: 1.6;
 }
 
 /* ===================================================
