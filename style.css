@@ -833,6 +833,36 @@ body.dark-mode .dark-mode-toggle .moon-icon {
 }
 
 /* ===================================================
+   CMT ACKNOWLEDGEMENT
+   Used on registration.html and submission.html
+   =================================================== */
+.cmt-acknowledgement {
+    max-width: 820px;
+    margin: 0 auto;
+    text-align: center;
+    padding: var(--spacing-xl) var(--spacing-2xl);
+    background: var(--card-bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-xl);
+}
+
+.cmt-acknowledgement h3 {
+    font-size: var(--font-size-sm);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--text-lighter);
+    font-weight: 700;
+    margin-bottom: var(--spacing-sm);
+}
+
+.cmt-acknowledgement p {
+    font-size: var(--font-size-sm);
+    color: var(--text-light);
+    line-height: 1.7;
+    margin-bottom: 0;
+}
+
+/* ===================================================
    COMMITTEE / LEADERSHIP CARDS
    Used on committee.html for Chief Patron, Patrons,
    Conference Chairs, Convenors, and the Advisory Committee.
