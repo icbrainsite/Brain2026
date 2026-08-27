@@ -145,6 +145,31 @@
         .policy-list li:last-child { border-bottom: none; }
         .policy-list svg { width: 18px; height: 18px; color: var(--secondary-color); flex-shrink: 0; margin-top: 2px; }
 
+        /* CMT Acknowledgement */
+        .cmt-acknowledgement {
+            max-width: 820px;
+            margin: 0 auto;
+            text-align: center;
+            padding: var(--spacing-xl) var(--spacing-2xl);
+            background: var(--card-bg-color);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-xl);
+        }
+        .cmt-acknowledgement h3 {
+            font-size: var(--font-size-sm);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: var(--text-lighter);
+            font-weight: 700;
+            margin-bottom: var(--spacing-sm);
+        }
+        .cmt-acknowledgement p {
+            font-size: var(--font-size-sm);
+            color: var(--text-light);
+            line-height: 1.7;
+            margin-bottom: 0;
+        }
+
         @media (max-width: 900px) {
             .payment-grid { grid-template-columns: 1fr; }
         }
@@ -173,11 +198,11 @@
                 <li><a href="./contact.html" class="nav-link">Contact</a></li>
             </ul>
             <div class="navbar-actions">
+                <a href="./registration.html" class="btn btn-primary btn-small">Register</a>
                 <button class="dark-mode-toggle" id="darkModeToggle" title="Toggle Dark Mode">
                     <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
                     <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
                 </button>
-                <a href="./registration.html" class="btn btn-primary btn-small">Register</a>
             </div>
         </div>
     </nav>
@@ -352,47 +377,57 @@
             </div>
             <div class="faq-grid">
                 <div class="faq-item">
-                    <div class="faq-question" onclick="toggleFAQ(this)">
+                    <div class="faq-question">
                         <h3>When does registration open and close?</h3>
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
                     </div>
                     <div class="faq-answer"><p>Registration opens on 1 September 2026 and closes on 26 November 2026.</p></div>
                 </div>
                 <div class="faq-item">
-                    <div class="faq-question" onclick="toggleFAQ(this)">
+                    <div class="faq-question">
                         <h3>Do I need to register before my paper is accepted?</h3>
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
                     </div>
                     <div class="faq-answer"><p>No — registration can be completed after acceptance notification (1 November 2026), but must be done before 26 November 2026 to secure your presentation slot.</p></div>
                 </div>
                 <div class="faq-item">
-                    <div class="faq-question" onclick="toggleFAQ(this)">
+                    <div class="faq-question">
                         <h3>Can I attend without presenting a paper?</h3>
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
                     </div>
                     <div class="faq-answer"><p>Yes — select the "Non-Author (Attendee Only)" category at ₹1,200 to attend without presenting.</p></div>
                 </div>
                 <div class="faq-item">
-                    <div class="faq-question" onclick="toggleFAQ(this)">
+                    <div class="faq-question">
                         <h3>How do foreign delegates pay the registration fee?</h3>
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
                     </div>
                     <div class="faq-answer"><p>Foreign delegates can pay the $50 fee via international bank transfer using the Swift code provided, or through the payment link shared on the registration form.</p></div>
                 </div>
                 <div class="faq-item">
-                    <div class="faq-question" onclick="toggleFAQ(this)">
+                    <div class="faq-question">
                         <h3>Will I receive a confirmation after registering?</h3>
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
                     </div>
                     <div class="faq-answer"><p>Yes — a confirmation email will be sent to your registered email address once your payment and form submission are verified.</p></div>
                 </div>
                 <div class="faq-item">
-                    <div class="faq-question" onclick="toggleFAQ(this)">
+                    <div class="faq-question">
                         <h3>Who do I contact for registration issues?</h3>
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
                     </div>
                     <div class="faq-answer"><p>Email icbrain@nsut.ac.in or visit our <a href="./contact.html">Contact page</a> for assistance.</p></div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CMT Acknowledgement -->
+    <section class="registration-cta-section" style="padding: var(--spacing-2xl) 0;">
+        <div class="container">
+            <div class="cmt-acknowledgement">
+                <h3>Acknowledgement</h3>
+                <p>The Microsoft CMT service was used for managing the peer-reviewing process for this conference. This service was provided for free by Microsoft and they bore all expenses, including costs for Azure cloud services as well as for software development and support.</p>
             </div>
         </div>
     </section>
