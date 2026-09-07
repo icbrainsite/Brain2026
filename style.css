@@ -918,6 +918,7 @@ body.dark-mode .dark-mode-toggle .moon-icon {
     width: 84px;
     height: 84px;
     border-radius: 50%;
+    overflow: hidden;
     margin: 0 auto var(--spacing-lg);
     background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     color: white;
