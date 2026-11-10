@@ -1011,6 +1011,36 @@ body.dark-mode .dark-mode-toggle .moon-icon {
     margin-bottom: 0;
 }
 
+/* Container for the avatar */
+.leadership-avatar {
+  width: 120px;          /* Set a fixed width */
+  height: 120px;         /* Set the same fixed height to make it a perfect square */
+  border-radius: 50%;    /* Turns the square into a perfect circle */
+  overflow: hidden;      /* Hides the corners of the image outside the circle */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e0e0e0; /* Background color for the fallback text */
+  margin: 0 auto 15px;   /* Centers the circle and adds spacing below it */
+}
+
+/* The actual image inside the circle */
+.leadership-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;     /* Prevents stretching by cropping the image to fit perfectly */
+}
+
+/* Fallback styles if the image fails to load */
+.avatar-fallback {
+  font-size: 24px;
+  font-weight: bold;
+  color: #555;
+  text-transform: uppercase;
+}
+
+
+
 .leadership-avatar img {
     width: 100%;
     height: 100%;
